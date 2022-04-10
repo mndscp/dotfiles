@@ -1,0 +1,84 @@
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias c="code"
+alias c.="code ."
+alias ci="composer install"
+alias cl="clear"
+alias eb="exec bash"
+alias ez="exec zsh"
+alias f="fzf"
+alias l="ls"
+alias l.="ls -d .*"
+alias ll="ls -al"
+alias ls="exa -lF --git --color-scale --icons --group-directories-first"
+alias lsd="exa -lFD --git --color-scale --icons --group-directories-first"
+alias n="nano"
+alias nf="neofetch"
+alias pd="popd"
+alias please="sudo"
+alias rm="trash"
+alias rgg="rg -g '!dist/*'"
+alias v="nvim"
+alias ws="wormhole send"
+alias yi="yarn install"
+
+# Config
+alias ca="$EDITOR ~/.aliases"
+alias clf="$EDITOR ~/.config/lf/lfrc"
+alias cz="$EDITOR ~/.zshrc"
+
+# git
+alias ga.="git add ."
+alias gb="git branch"
+alias gbd="git branch -d"
+alias gbr="git branch -r"
+alias gcl='git clone'
+alias gc='git checkout'
+alias gcam='git commit -am ""'
+alias gcb='git checkout -b'
+alias gcm='git checkout master; git pull --prune'
+alias gf='git fetch'
+alias gfom='git fetch origin master'
+alias gfp='git fetch --prune'
+alias gm='git merge'
+alias gmom='git merge origin master'
+alias gp='git pull --prune'
+alias gpom='git pull origin master'
+alias gpush='git push'
+alias gs='git status'
+alias gsa='git stash apply'
+alias gsl='git stash list'
+alias gsp='git stash pop'
+alias gst='git stash -u'
+
+# npm
+alias na='npm audit'
+alias naf='npm audit fix'
+alias nci="npm clean-install"
+alias ni="npm i"
+alias nid="npm i -D"
+alias nig="npm i -g"
+alias nld='npm ls -D --depth=0'
+alias nlg='npm ls -g --depth=0'
+alias nr='npm run'
+alias nrb='npm run build'
+alias nrd='npm run dev'
+alias nrmd="npm r -D"
+alias nrmg="npm r -g"
+alias nrod="npm run rollup:dev"
+alias nrop="npm run rollup:prod"
+alias prod="npm run rollup:prod"
+
+# yadm
+alias y="yadm"
+alias ya="yadm add"
+alias yau="yadm add -u"
+alias yd="yadm decrypt"
+alias ye="yadm encrypt"
+alias yc="yadm commit"
+alias yr="yadm reset"
+alias yrv="yadm remote -v"
+alias yp="yadm pull --prune"
+alias ypu="yadm push"
+alias ys="yadm status"

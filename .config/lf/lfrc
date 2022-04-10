@@ -1,0 +1,39 @@
+set drawbox
+set icons
+set previewer pistol
+
+cmd mkdir ${{
+  printf "Directory name: "
+  read answer
+  mkdir $answer
+}}
+
+cmd yadmAdd ${{
+  yadm add $fx
+}}
+
+map y yadmAdd
+
+map w set hidden!
+map <esc> quit
+map <enter> open
+map q quit
+map N search-next
+
+map i up
+map k down
+map j updir
+map l open
+map h top
+map ";" bottom
+map g page-up
+map b page-down
+map , paste
+map m copy
+map . cut
+
+map n mkdir
+
+map r rename
+map <delete> delete
+map x unselect 
