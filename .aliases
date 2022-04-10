@@ -30,22 +30,19 @@ alias cz="$EDITOR ~/.zshrc"
 
 # git
 alias ga.="git add ."
-alias gb="git branch"
 alias gbd="git branch -d"
 alias gbr="git branch -r"
 alias gcl='git clone'
-alias gc='git checkout'
-alias gcam='git commit -am ""'
 alias gcb='git checkout -b'
+alias gch='git checkout'
 alias gcm='git checkout master; git pull --prune'
+alias gcmain='git checkout main; git pull --prune'
 alias gf='git fetch'
 alias gfom='git fetch origin master'
-alias gfp='git fetch --prune'
-alias gm='git merge'
 alias gmom='git merge origin master'
 alias gp='git pull --prune'
 alias gpom='git pull origin master'
-alias gpush='git push'
+alias gpu='git push'
 alias gs='git status'
 alias gsa='git stash apply'
 alias gsl='git stash list'

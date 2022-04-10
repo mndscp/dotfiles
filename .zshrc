@@ -94,8 +94,6 @@ ex ()
       *.tar.zst)   unzstd $1    ;;
       *)           echo "'$1' cannot be extracted via ex()" ;;
     esac
-  else
-    echo "'$1' is not a valid file"
   fi
 }
 
