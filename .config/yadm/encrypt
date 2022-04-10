@@ -1,7 +1,6 @@
 .cache/zsh/history
 .composer/auth.json
 .gitconfig*
-.shh/*
 .npmrc
 .zprofile
 s*g/bin/*
