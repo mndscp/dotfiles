@@ -22,6 +22,8 @@ alias rm="trash"
 alias rgg="rg -g '!dist/*'"
 alias v="nvim"
 alias ws="wormhole send"
+alias yar="yay -R"
+alias yas="yay -S"
 alias yi="yarn install"
 
 # Config

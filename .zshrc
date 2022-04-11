@@ -70,7 +70,9 @@ source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # Up and down arrow keys in history search
 bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "^[[A" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
+bindkey "^[[B" history-substring-search-down
 
 # Archive extraction
 # usage: ex <file>
