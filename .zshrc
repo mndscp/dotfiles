@@ -1,5 +1,5 @@
+export PROMPT='%F{blue}%~%f%F{green}$vcs_info_msg_0_%f › '
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-
 export EDITOR=nvim
 export EXA_ICON_SPACING=2
 
@@ -13,9 +13,6 @@ setopt prompt_subst
 # RPROMPT=\$vcs_info_msg_0_
 zstyle ':vcs_info:git:*' formats ' %b'
 zstyle ':vcs_info:*' enable git
-
-# Prompt
-export PROMPT='%F{blue}%~%f%F{green}$vcs_info_msg_0_%f > '
 
 # History
 HISTFILE=~/.cache/zsh/history
@@ -57,16 +54,36 @@ bindkey -M menuselect 'i' up-line-or-history
 bindkey -M menuselect 'l' forward-char
 bindkey -M menuselect 'k' down-line-or-history
 
-# Import aliases and make them into session abbreviations
-source ~/.aliases
-source ~/.zsh/zsh-abbr/zsh-abbr.zsh
-abbr -S -q import-aliases
+# Source file if it exists
+function zsh_source_file() {
+  [ -f "$HOME/.zsh/$1" ] && source "$HOME/.zsh/$1"
+}
+
+# Clone plugin if needed and source it
+function zsh_source_plugin() {
+  ZDIR=$HOME/.zsh
+  PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
+
+  if ! [ -d "$ZDIR/$PLUGIN_NAME" ]; then
+    git clone "https://github.com/$1.git" "$ZDIR/$PLUGIN_NAME"
+  fi
+
+  zsh_source_file "$PLUGIN_NAME/$PLUGIN_NAME.plugin.zsh" || \
+  zsh_source_file "$PLUGIN_NAME/$PLUGIN_NAME.zsh"
+}
 
 # Various sources (order is important)
-source ~/.zsh/zsh-z/zsh-z.plugin.zsh
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+zsh_source_plugin "agkozak/zsh-z"
+zsh_source_plugin "zsh-users/zsh-autosuggestions"
+zsh_source_plugin "zsh-users/zsh-syntax-highlighting"
+zsh_source_plugin "zsh-users/zsh-history-substring-search"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Import aliases and make them into session abbreviations
+source ~/.aliases
+zsh_source_plugin "olets/zsh-abbr"
+[ -d "$HOME/.zsh/zsh-abbr" ] && abbr -S -q import-aliases
 
 # Up and down arrow keys in history search
 bindkey "$terminfo[kcuu1]" history-substring-search-up
@@ -273,5 +290,3 @@ ex=:\
 *.pdf=:\
 *.nix=:\
 "
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
