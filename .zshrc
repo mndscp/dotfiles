@@ -3,6 +3,13 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export EDITOR=nvim
 export EXA_ICON_SPACING=2
 
+# fzf
+export FZF_DEFAULT_COMMAND='fd --type file --hidden --strip-cwd-prefix'
+# export FZF_DEFAULT_OPTS="--preview 'bat --color=always --line-range :50 {}'"
+export FZF_CTRL_T_OPTS="-e --preview 'bat --color=always --line-range :50 {}'"
+export FZF_ALT_C_COMMAND='fd --type d . --hidden --search-path $HOME'
+# export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -50'"
+
 # Needed for yadm file encryption
 export GPG_TTY=$(tty)
 
@@ -127,6 +134,8 @@ lfcd () {
   fi
 }
 bindkey -s '^o' 'lfcd\n'
+
+bindkey -s '^b' 'bat < fzf -e\n'
 
 export LF_ICONS="\
 tw=:\
