@@ -26,8 +26,6 @@ map j updir
 map l open
 map h top
 map ";" bottom
-map g page-up
-map b page-down
 map , paste
 map m copy
 map . cut

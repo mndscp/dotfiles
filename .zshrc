@@ -4,11 +4,12 @@ export EDITOR=nvim
 export EXA_ICON_SPACING=2
 
 # fzf
-export FZF_DEFAULT_COMMAND='fd --type file --hidden --strip-cwd-prefix'
-# export FZF_DEFAULT_OPTS="--preview 'bat --color=always --line-range :50 {}'"
-export FZF_CTRL_T_OPTS="-e --preview 'bat --color=always --line-range :50 {}'"
-export FZF_ALT_C_COMMAND='fd --type d . --hidden --search-path $HOME'
-# export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -50'"
+export FZF_DEFAULT_COMMAND="fd --type f --hidden --search-path $HOME"
+# export FZF_DEFAULT_OPTS="-e --preview 'pistol {}'"
+export FZF_DEFAULT_OPTS="-e"
+export FZF_CTRL_T_COMMAND="fd --hidden --search-path $HOME"
+export FZF_CTRL_T_OPTS="-e --preview 'pistol {}'"
+export FZF_ALT_C_COMMAND="fd --type d . --hidden --search-path $HOME"
 
 # Needed for yadm file encryption
 export GPG_TTY=$(tty)
@@ -17,7 +18,6 @@ autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
-# RPROMPT=\$vcs_info_msg_0_
 zstyle ':vcs_info:git:*' formats ' %b'
 zstyle ':vcs_info:*' enable git
 
@@ -79,6 +79,10 @@ function zsh_source_plugin() {
   zsh_source_file "$PLUGIN_NAME/$PLUGIN_NAME.zsh"
 }
 
+# Import aliases and make them into session abbreviations
+source ~/.aliases
+zsh_source_plugin "olets/zsh-abbr" && abbr -S -q import-aliases
+
 # Various sources (order is important)
 zsh_source_plugin "agkozak/zsh-z"
 zsh_source_plugin "zsh-users/zsh-autosuggestions"
@@ -86,12 +90,6 @@ zsh_source_plugin "zsh-users/zsh-syntax-highlighting"
 zsh_source_plugin "zsh-users/zsh-history-substring-search"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Import aliases and make them into session abbreviations
-source ~/.aliases
-zsh_source_plugin "olets/zsh-abbr"
-[ -d "$HOME/.zsh/zsh-abbr" ] && abbr -S -q import-aliases
-
 # Up and down arrow keys in history search
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "^[[A" history-substring-search-up

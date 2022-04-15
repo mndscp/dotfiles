@@ -36,8 +36,10 @@ alias cz="$EDITOR ~/.zshrc"
 # git
 alias ga.="git add ."
 alias gbd="git branch -d"
+alias gb="git branch"
 alias gbr="git branch -r"
 alias gcl='git clone'
+alias gc='git checkout'
 alias gcb='git checkout -b'
 alias gch='git checkout'
 alias gcm='git checkout master; git pull --prune'
