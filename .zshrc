@@ -133,8 +133,6 @@ lfcd () {
 }
 bindkey -s '^o' 'lfcd\n'
 
-bindkey -s '^b' 'bat < fzf -e\n'
-
 export LF_ICONS="\
 tw=:\
 st=:\
