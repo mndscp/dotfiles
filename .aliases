@@ -35,6 +35,7 @@ alias cz="$EDITOR ~/.zshrc"
 
 # git
 alias ga.="git add ."
+alias gau="git add -u"
 alias gbd="git branch -d"
 alias gb="git branch"
 alias gbr="git branch -r"
@@ -51,6 +52,7 @@ alias gmom='git merge origin master'
 alias gp='git pull --prune'
 alias gpom='git pull origin master'
 alias gpu='git push'
+alias gr='git remote -v'
 alias gs='git status'
 alias gsa='git stash apply'
 alias gsl='git stash list'
@@ -78,6 +80,7 @@ alias prod="npm run rollup:prod"
 # yadm
 alias y="yadm"
 alias ya="yadm add"
+alias yacp="yadm add -u && yadm commit && yadm push"
 alias yau="yadm add -u"
 alias yd="yadm decrypt"
 alias ye="yadm encrypt"

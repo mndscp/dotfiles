@@ -8,30 +8,14 @@ cmd mkdir ${{
   mkdir $answer
 }}
 
-cmd yadmAdd ${{
-  yadm add $fx
-}}
-
-map y yadmAdd
-
-map w set hidden!
-map <esc> quit
+map <delete> delete
 map <enter> open
-map q quit
-map N search-next
+map <esc> quit
 
 map i up
-map k down
 map j updir
+map k down
 map l open
-map h top
-map ";" bottom
-map , paste
-map m copy
-map . cut
 
-map n mkdir
-
-map r rename
-map <delete> delete
-map x unselect 
+map m mkdir
+map o $$PAGER "$f"
