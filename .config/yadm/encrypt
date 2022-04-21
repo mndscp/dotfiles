@@ -3,4 +3,4 @@
 .gitconfig*
 .npmrc
 .zprofile
-s*g/bin/*
+s*b/bin/*
