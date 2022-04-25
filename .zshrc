@@ -36,13 +36,22 @@ fi
 source_file ~/.p10k.zsh
 source_file /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
+# # Pre-p10k prompt
+# autoload -Uz vcs_info
+# precmd_vcs_info() { vcs_info }
+# precmd_functions+=( precmd_vcs_info )
+# setopt prompt_subst
+# zstyle ':vcs_info:git:*' formats ' %b'
+# zstyle ':vcs_info:*' enable git
+# export PROMPT='%F{blue}%~%f%F{green}$vcs_info_msg_0_%f › '
+
 # General settings
+export DOWNGRADE_FROM_ALA="1"
 export EDITOR="nvim"
 export EXA_ICON_SPACING="2"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export OPENER="code"
 export PAGER="bat"
-# export PROMPT='%F{blue}%~%f%F{green}$vcs_info_msg_0_%f › '
 
 # fzf
 export FZF_DEFAULT_COMMAND="fd --type f --hidden --search-path $HOME"
@@ -55,14 +64,6 @@ source_file "/usr/share/fzf/key-bindings.zsh"
 
 # Needed for yadm file encryption
 export GPG_TTY=$(tty)
-
-# # Git info for prompt
-# autoload -Uz vcs_info
-# precmd_vcs_info() { vcs_info }
-# precmd_functions+=( precmd_vcs_info )
-# setopt prompt_subst
-# zstyle ':vcs_info:git:*' formats ' %b'
-# zstyle ':vcs_info:*' enable git
 
 # History
 HISTFILE=~/.cache/zsh/history

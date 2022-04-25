@@ -2,7 +2,7 @@ set drawbox
 set icons
 set previewer pistol
 
-# Functions
+# Commands
 # --------------------------------------------------------------------
 
 cmd mkdir ${{
