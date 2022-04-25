@@ -2,22 +2,37 @@ set drawbox
 set icons
 set previewer pistol
 
+# Functions
+# --------------------------------------------------------------------
+
 cmd mkdir ${{
   printf "Directory name: "
   read answer
   mkdir $answer
+
+  lf -remote "send $id cd $answer"
 }}
+
+cmd fzf_jump ${{
+  res="$(fd . $HOME -t d | fzf --reverse --header='Jump to location')"
+  lf -remote "send $id cd \"$res\""
+}}
+
+# Bindings
+# --------------------------------------------------------------------
 
 map <delete> delete
 map <enter> open
 map <esc> quit
+map <c-c> quit
 
 map i up
 map j updir
 map k down
 map l open
-
 map h top
 map ";" bottom
+
+map b $$PAGER "$f"
 map m mkdir
-map o $$PAGER "$f"
+map o fzf_jump
