@@ -7,15 +7,15 @@ set previewer pistol
 
 cmd mkdir ${{
   printf "Directory name: "
-  read answer
-  mkdir $answer
+  read name
+  mkdir $name
 
-  lf -remote "send $id cd $answer"
+  lf -remote "send $id cd $name"
 }}
 
 cmd fzf_jump ${{
-  res="$(fd . $HOME -t d | fzf --reverse --header='Jump to location')"
-  lf -remote "send $id cd \"$res\""
+  dir="$(fd . $HOME -t d | fzf --reverse --header='Jump to location')"
+  lf -remote "send $id cd \"$dir\""
 }}
 
 # Bindings
