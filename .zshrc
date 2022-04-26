@@ -49,7 +49,6 @@ source_file /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # export PROMPT='%F{blue}%~%f%F{green}$vcs_info_msg_0_%f › '
 
 # General settings
-export DOWNGRADE_FROM_ALA="1"
 export EDITOR="nvim"
 export EXA_ICON_SPACING="2"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
