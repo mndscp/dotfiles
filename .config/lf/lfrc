@@ -18,6 +18,10 @@ cmd fzf_jump ${{
   lf -remote "send $id cd \"$dir\""
 }}
 
+cmd bat ${{
+  $PAGER "$f"
+}}
+
 # Bindings
 # --------------------------------------------------------------------
 
@@ -33,6 +37,10 @@ map l open
 map h top
 map ";" bottom
 
-map b $$PAGER "$f"
+map b bat
 map m mkdir
 map o fzf_jump
+
+map gc cd ~/.config
+map gs cd ~/.ssh
+map gm cd ~/mndscp

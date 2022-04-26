@@ -30,6 +30,7 @@ alias yi="yarn install"
 # Config
 alias ca="$OPENER ~/.aliases"
 alias clf="$OPENER ~/.config/lf/lfrc"
+alias cp="$OPENER ~/.p10k.zsh"
 alias cz="$OPENER ~/.zshrc"
 
 # git

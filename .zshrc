@@ -1,3 +1,6 @@
+# Needed for yadm file encryption
+export GPG_TTY=$(tty)
+
 # Source file if it exists
 function source_file() {
   [ -f "$1" ] && source "$1"
@@ -19,7 +22,7 @@ function source_zsh_plugin() {
 # Import aliases and load them them as session abbreviations
 source_file ~/.aliases && source_zsh_plugin "olets/zsh-abbr" && abbr -S -q import-aliases
 
-# Various sources (order is important)
+# Plugins (order is important)
 source_zsh_plugin agkozak/zsh-z
 source_zsh_plugin zsh-users/zsh-autosuggestions
 source_zsh_plugin zsh-users/zsh-syntax-highlighting
@@ -61,9 +64,6 @@ export FZF_CTRL_T_OPTS="-e --preview 'pistol {}'"
 export FZF_ALT_C_COMMAND="fd --type d . --hidden --search-path $HOME"
 source_file "/usr/share/fzf/completion.zsh"
 source_file "/usr/share/fzf/key-bindings.zsh"
-
-# Needed for yadm file encryption
-export GPG_TTY=$(tty)
 
 # History
 HISTFILE=~/.cache/zsh/history
