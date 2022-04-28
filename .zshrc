@@ -23,7 +23,6 @@ function source_zsh_plugin() {
 source_file ~/.aliases && source_zsh_plugin "olets/zsh-abbr" && abbr -S -q import-aliases
 
 # Plugins (order is important)
-source_zsh_plugin agkozak/zsh-z
 source_zsh_plugin zsh-users/zsh-autosuggestions
 source_zsh_plugin zsh-users/zsh-syntax-highlighting
 source_zsh_plugin zsh-users/zsh-history-substring-search
@@ -97,6 +96,9 @@ zstyle ':completion:*' expand prefix suffix
 zstyle :compinstall filename '~/.zshrc'
 zmodload zsh/complist
 compinit
+
+# zoxide (init after compinit)
+eval "$(zoxide init zsh --cmd j)"
 
 # Arrow keys in tab complete menu
 bindkey -M menuselect 'j' backward-char
