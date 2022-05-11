@@ -23,6 +23,7 @@ function source_zsh_plugin() {
 source_file ~/.aliases && source_zsh_plugin "olets/zsh-abbr" && abbr -S -q import-aliases
 
 # Plugins (order is important)
+source_zsh_plugin Aloxaf/fzf-tab
 source_zsh_plugin zsh-users/zsh-autosuggestions
 source_zsh_plugin zsh-users/zsh-syntax-highlighting
 source_zsh_plugin zsh-users/zsh-history-substring-search
@@ -154,3 +155,15 @@ bindkey -s '^o' 'lfcd\n'
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# fzf-tab
+# disable sort when completing `git checkout`
+zstyle ':completion:*:git-checkout:*' sort false
+# set descriptions format to enable group support
+# zstyle ':completion:*:descriptions' format '[%d]'
+# set list-colors to enable filename colorizing
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+# preview directory's content with exa when completing cd
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
+# switch group using `,` and `.`
+zstyle ':fzf-tab:*' switch-group ',' '.'
