@@ -52,8 +52,13 @@ source_file /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 export EDITOR="nvim"
 export EXA_ICON_SPACING="2"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-export OPENER="code"
+export OPENER="codium"
 export PAGER="bat"
+export GOPATH="$HOME/.go"
+export LC_ALL="en_US.UTF-8"
+
+# Disable less history file
+export LESSHISTFILE=-
 
 # fzf
 export FZF_DEFAULT_COMMAND="fd --type f --hidden --search-path $HOME"
