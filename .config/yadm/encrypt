@@ -4,5 +4,3 @@
 .gitconfig*
 .npmrc
 .ssh/*
-.zprofile
-s*b/bin/*
