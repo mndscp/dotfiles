@@ -48,7 +48,7 @@ fi
 source_file ~/.p10k.zsh
 source_file /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
-# # Pre-p10k prompt
+# # Non-p10k prompt
 # autoload -Uz vcs_info
 # precmd_vcs_info() { vcs_info }
 # precmd_functions+=( precmd_vcs_info )
