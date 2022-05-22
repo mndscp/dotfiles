@@ -24,6 +24,7 @@ alias pd="popd"
 alias rm="trash"
 alias rgg="rg -g '!dist/*'"
 alias v="nvim"
+alias wr="wormhole receive"
 alias ws="wormhole send"
 alias yar="yay -R"
 alias yas="yay -S"
@@ -32,7 +33,7 @@ alias yi="yarn install"
 # Config
 alias ca="$OPENER ~/.aliases"
 alias clf="$OPENER ~/.config/lf/lfrc"
-alias cp="$OPENER ~/.p10k.zsh"
+alias cp10="$OPENER ~/.p10k.zsh"
 alias cz="$OPENER ~/.zshrc"
 
 # git
