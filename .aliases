@@ -60,16 +60,12 @@ alias gsa='git stash apply'
 alias gsl='git stash list'
 alias gsp='git stash pop'
 alias gst='git stash -u'
-alias gw='git worktree'
-alias gwa='git worktree add'
-alias gwl='git worktree list'
-alias gwr='git worktree remove'
 
 # npm
 alias na='npm audit'
 alias naf='npm audit fix'
 alias nci="npm clean-install"
-alias ni="npm i"
+alias ni="npm install"
 alias nid="npm i -D"
 alias nig="npm i -g"
 alias nld='npm ls -D --depth=0'
