@@ -78,6 +78,7 @@ alias nrmg="npm r -g"
 alias nrod="npm run rollup:dev"
 alias nrop="npm run rollup:prod"
 alias prod="npm run rollup:prod"
+alias nu="npm update"
 
 # yadm
 alias y="yadm"
