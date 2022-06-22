@@ -32,6 +32,8 @@ alias yi="yarn install"
 
 # Config
 alias ca="$OPENER ~/.aliases"
+alias ce="$OPENER ~/.config/espanso/match/base.yml"
+alias ck="$OPENER ~/.config/kmonad/qwerty.kbd"
 alias clf="$OPENER ~/.config/lf/lfrc"
 alias cp10="$OPENER ~/.p10k.zsh"
 alias cz="$OPENER ~/.zshrc"
