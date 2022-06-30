@@ -103,9 +103,6 @@ zstyle :compinstall filename '~/.zshrc'
 zmodload zsh/complist
 compinit
 
-# zoxide (init after compinit)
-eval "$(zoxide init zsh --cmd j)"
-
 # Arrow keys in tab complete menu
 bindkey -M menuselect 'j' backward-char
 bindkey -M menuselect 'i' up-line-or-history
