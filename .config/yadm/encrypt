@@ -1,5 +1,6 @@
 .cache/zsh/history
 .composer/auth.json
+.config/khotkeysrc
 .config/kmahjonggrc
 .config/lf/lfrc
 .gitconfig*
