@@ -2,6 +2,24 @@
 update_info=kwinrules.upd:replace-placement-string-to-enum,kwinrules.upd:use-virtual-desktop-ids
 
 [1]
+Description=Window settings for whatsapp-nativefier-d40211
+clientmachine=localhost
+maximizehoriz=true
+maximizevert=true
+position=0,0
+positionrule=3
+size=1280,1412
+sizerule=3
+skipswitcher=true
+skiptaskbar=true
+title=WhatsApp
+types=1
+windowrole=browser-window
+windowrolematch=1
+wmclass=whatsapp-nativefier-d40211
+wmclassmatch=1
+
+[2]
 Description=Window settings for transmission-remote-gtk
 clientmachine=localhost
 ignoregeometry=true
@@ -9,6 +27,7 @@ maximizehoriz=true
 maximizehorizrule=3
 maximizevert=true
 maximizevertrule=3
+position=0,0
 size=800,650
 skipswitcher=true
 skipswitcherrule=3
@@ -20,7 +39,21 @@ types=1
 wmclass=transmission-remote-gtk
 wmclassmatch=1
 
-[2]
+[291a8313-1716-4d51-85f2-49415146db83]
+Description=Window settings for whatsapp-nativefier-d40211
+clientmachine=localhost
+maximizevert=true
+maximizevertrule=3
+position=0,0
+positionrule=3
+size=1280,1412
+sizerule=3
+title=WhatsApp
+types=1
+wmclass=whatsapp-nativefier-d40211
+wmclassmatch=1
+
+[3]
 Description=Window settings for mpv
 clientmachine=localhost
 ignoregeometry=true
@@ -28,13 +61,14 @@ maximizehorizrule=3
 maximizevertrule=3
 position=0,0
 size=800,650
+skiptaskbar=true
 title=mpv
 types=1
 wmclass=gl mpv
 wmclasscomplete=true
 wmclassmatch=1
 
-[3]
+[4]
 Description=audacious Song Info
 clientmachine=localhost
 ignoregeometry=true
@@ -52,31 +86,19 @@ types=32
 wmclass=audacious
 wmclassmatch=1
 
-[4]
+[5]
 Description=dolphin
 clientmachine=localhost
 ignoregeometry=true
 ignoregeometryrule=2
-maximizehoriz=true
 maximizevert=true
 position=0,0
 positionrule=3
 size=1280,1412
 sizerule=4
-skiptaskbar=true
 title=Downloads — Dolphin
 types=1
 wmclass=dolphin
-wmclassmatch=1
-
-[5]
-Description=fsearch
-maximizevert=true
-maximizevertrule=3
-position=1280,0
-positionrule=3
-types=1
-wmclass=fsearch
 wmclassmatch=1
 
 [57c292cb-2da9-474b-bfb9-e94483bf6193]
@@ -85,6 +107,18 @@ skiptaskbar=true
 skiptaskbarrule=3
 types=1
 wmclass=transmission-remote-gtk
+wmclassmatch=1
+
+[6]
+Description=fsearch
+clientmachine=localhost
+maximizevert=true
+maximizevertrule=3
+position=1280,0
+positionrule=3
+title=Downloads — Dolphin
+types=1
+wmclass=fsearch
 wmclassmatch=1
 
 [69caa33d-03c6-43e6-b3ec-ce3780ac35a2]
@@ -132,8 +166,8 @@ wmclass=dolphin
 wmclassmatch=1
 
 [General]
-count=5
-rules=1,2,3,4,5
+count=6
+rules=1,2,3,4,5,6
 
 [c8c05ca5-21b8-4e32-8032-8bad50f159dd]
 Description=fsearch
@@ -156,6 +190,20 @@ title=mpv
 types=1
 wmclass=gl mpv
 wmclasscomplete=true
+wmclassmatch=1
+
+[e368d7dd-9fa1-45eb-a6ef-9bb205b854ae]
+Description=Window settings for whatsapp-nativefier-d40211
+clientmachine=localhost
+position=0,0
+positionrule=3
+size=1280,1412
+sizerule=3
+title=WhatsApp
+types=1
+windowrole=browser-window
+windowrolematch=1
+wmclass=whatsapp-nativefier-d40211
 wmclassmatch=1
 
 [f232d32f-b5d7-4aed-aec3-6f5450a48803]

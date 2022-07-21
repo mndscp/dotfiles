@@ -28,6 +28,7 @@ LongitudeAuto=8.6843
 NightTemperature=2800
 
 [Plugins]
+kwin4_effect_dialogparentEnabled=false
 kwin4_effect_dimscreenEnabled=true
 kwin4_effect_fadingpopupsEnabled=false
 kwin4_effect_fullscreenEnabled=false
