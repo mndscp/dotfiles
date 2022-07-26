@@ -1,0 +1,10 @@
+.cache/zsh/history
+.composer/auth.json
+.config/khotkeysrc
+.config/kmahjonggrc
+.config/kwinrulesrc
+.config/lf/lfrc
+.config/nomacs/Image Lounge.conf
+.gitconfig*
+.npmrc
+.ssh/*
