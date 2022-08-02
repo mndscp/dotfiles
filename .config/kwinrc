@@ -19,7 +19,6 @@ MoveResize=90
 CommandActiveTitlebar2=Close
 CommandAllWheel=Change Opacity
 CommandInactiveTitlebar2=Close
-CommandTitlebarWheel=Maximize/Restore
 
 [NightColor]
 Active=true
@@ -45,6 +44,7 @@ LayoutName=compact
 DelayFocusInterval=0
 ElectricBorderDelay=100
 FocusPolicy=FocusFollowsMouse
+FocusStealingPreventionLevel=0
 
 [org.kde.kdecoration2]
 ButtonsOnLeft=M
