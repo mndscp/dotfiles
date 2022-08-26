@@ -84,6 +84,10 @@ alias nrmg="npm r -g"
 alias nrod="npm run rollup:dev"
 alias nrop="npm run rollup:prod"
 alias prod="npm run rollup:prod"
+alias nrtj="npm run test:js"
+alias nrtju="npm run test-update-snapshot:js"
+alias nrtp="npm run test:php"
+alias nrtpu="npm run test-update-snapshot:php"
 alias nu="npm update"
 
 # yadm

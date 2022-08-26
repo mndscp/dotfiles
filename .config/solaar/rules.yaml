@@ -39,7 +39,5 @@
 ...
 ---
 - Key: [DPI Switch, pressed]
-- KeyPress:
-  - XF86_AudioPause
-  - click
+- Execute: [audacious, -t]
 ...
