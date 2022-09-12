@@ -22,8 +22,8 @@ CommandInactiveTitlebar2=Close
 
 [NightColor]
 Active=true
-LatitudeAuto=50.1188
-LongitudeAuto=8.6843
+LatitudeAuto=52.5196
+LongitudeAuto=13.4069
 NightTemperature=2800
 
 [Plugins]
@@ -43,8 +43,6 @@ LayoutName=compact
 [Windows]
 DelayFocusInterval=0
 ElectricBorderDelay=100
-FocusPolicy=FocusFollowsMouse
-FocusStealingPreventionLevel=0
 
 [org.kde.kdecoration2]
 ButtonsOnLeft=M
