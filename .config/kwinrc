@@ -26,8 +26,8 @@ CommandInactiveTitlebar2=Close
 
 [NightColor]
 Active=true
-LatitudeAuto=48.1336
-LongitudeAuto=11.5658
+LatitudeAuto=52.5196
+LongitudeAuto=13.4069
 NightTemperature=2800
 
 [Plugins]
