@@ -37,7 +37,6 @@
 .config/transmission-remote-gtk/config.json
 .config/VSCodium/CachedExtensions/builtin
 .config/VSCodium/CachedExtensions/user
-.config/VSCodium/CachedExtensionVSIXs/*
 .config/VSCodium/User/snippets/*
 .config/VSCodium/User/keybindings.json
 .config/VSCodium/User/settings.json
