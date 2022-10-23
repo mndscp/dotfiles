@@ -18,7 +18,6 @@
 .config/fsearch/fsearch.conf
 .config/khotkeysrc
 .config/kmahjonggrc
-.config/kwinrulesrc
 .config/lf/*
 .config/Mailspring/config.json
 .config/Mailspring/keymap.json
