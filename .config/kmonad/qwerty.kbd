@@ -1,0 +1,105 @@
+(defcfg
+  input (device-file "/dev/input/event2")
+  output (uinput-sink "KMonad output")
+  fallthrough true
+  allow-cmd true
+)
+
+(defalias
+  Atb A-tab
+  At2 (around lalt #(tab P50 tab))
+  Stb S-tab
+
+  ae RA-a
+  oe RA-o
+  ue RA-u
+  sz RA-s
+
+  CSn C-S-n
+
+  han KeyHangeul
+
+  a (tap-hold-next-release 250 a lmet)
+  s (tap-hold-next-release 250 s lalt)
+  d (tap-hold-next-release 250 d lctl)
+  f (tap-hold-next-release 250 f lsft)
+  j (tap-hold-next-release 250 j rsft)
+  k (tap-hold-next-release 250 k lctl)
+  l (tap-hold-next-release 250 l lalt)
+
+  Ca (tap-hold-next-release 250 C-a lctl)
+  esc (tap-hold-next-release 250 esc lalt)
+  bsp (tap-hold-next-release 250 bspc lctl)
+  ret (tap-hold-next-release 250 ret lsft)
+  f12 (tap-hold-next-release 200 f12 lsft)
+
+  tab (tap-hold-next-release 250 tab (layer-toggle tab))
+  sym (tap-hold-next-release 250 ralt (layer-toggle sym))
+  num (tap-hold-next-release 250 e (layer-toggle num))
+  spc (tap-hold-next-release 250 spc (layer-toggle nav))
+  cps (tap-hold-next-release 250 esc (layer-toggle ctl))
+)
+
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]
+  caps a    s    d    f    g    h    j    k    l    ;    '    \    ret
+  lsft 102d z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet cmp  rctl
+)
+
+(deflayer qwerty
+  _    _    _    _    _    _    _    _    _    _    _    [    ]    _
+  @tab _    _    @num _    _    _    _    _    _    _    -    =
+  @cps @a   @s   @d   @f   _    _    @j   @k   @l   _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _              @spc           @han _    _    _
+)
+
+(deflayer nav
+  _    _    _    _    _    _    _    _    *    \(   \)   {    }    _
+  _    _    @Stb spc  tab  @Atb @At2 bspc up   del  :    \_   +
+  _    @Ca  @esc @bsp @ret pgup home left down rght end  "    |    _
+  _    _    _    C-y C-z del  pgdn _    C-c C-v C-x ?    _
+  _    _    _              XX             _    _    _    _
+)
+
+(deflayer sym
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    @ae  @oe  @ue  @sz  _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _              _              _    _    _    _
+)
+
+(deflayer ctl
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _   C-q  C-w  C-e  C-r  C-t   _    _    _    _    _    _    _
+  XX  C-a  C-s  C-d  C-f  C-g  C-h   @ae  @oe  @ue  @sz  _    _    _
+  _   _    C-z  C-x  C-c  C-v  C-b   _    _    _    _    _    _
+  _   _    bspc           @ret            _    _    _    _
+)
+
+(deflayer num
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    @Stb XX   tab  _    /    7    8    9    *    _    _
+  _    _    _    _    _    _    +    4    5    6    .    _    _    _
+  _    _    _    _    _    _    _    -    1    2    3    _    _
+  _    _    _              0              _    _    _    _
+)
+
+(deflayer tab
+  _    C-1  C-2  prnt _    _    _    _    _    _    _    _    _    _
+  XX   _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    @CSn           @f12           _    _    _    _
+)
+
+;; (deflayer template
+;;   _    _    _    _    _    _    _    _    _    _    _    _    _    _
+;;   _    _    _    _    _    _    _    _    _    _    _    _    _
+;;   _    _    _    _    _    _    _    _    _    _    _    _    _    _
+;;   _    _    _    _    _    _    _    _    _    _    _    _    _
+;;   _    _    _              _              _    _    _    _
+;; )
