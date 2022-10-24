@@ -6,6 +6,7 @@ export OPENER="codium"
 export PAGER="bat"
 export GOPATH="$HOME/.go"
 export LC_ALL="en_US.UTF-8"
+export PATH=$PATH:~/.local/bin
 
 # Needed for yadm file encryption
 export GPG_TTY=$(tty)
@@ -169,3 +170,4 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
 # switch group using `,` and `.`
 zstyle ':fzf-tab:*' switch-group ',' '.'
+

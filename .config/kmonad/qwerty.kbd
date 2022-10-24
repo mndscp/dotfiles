@@ -17,6 +17,16 @@
 
   CSn C-S-n
 
+  tbq M-C-A-q
+  tbw M-C-A-w
+  tbe M-C-A-e
+  tbr M-C-A-r
+  tbt M-C-A-t
+  tba M-C-A-a
+  tbs M-C-A-s
+  tbd M-C-A-d
+  tbf M-C-A-f
+
   han KeyHangeul
 
   a (tap-hold-next-release 250 a lmet)
@@ -90,8 +100,8 @@
 
 (deflayer tab
   _    C-1  C-2  prnt _    _    _    _    _    _    _    _    _    _
-  XX   _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  XX   @tbq @tbw @tbe @tbr @tbt _    _    _    _    _    _    _
+  _    @tba @tbs @tbd @tbf _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    @CSn           @f12           _    _    _    _
 )
