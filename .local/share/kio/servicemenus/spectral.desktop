@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Service
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin
+MimeType=audio/*;
+Actions=spectralAnalysis;
+X-KDE-AuthorizeAction=shell_access
+
+[Desktop Action spectralAnalysis]
+TryExec=puddletag
+Exec=~/.local/bin/spectral %f
+Icon=view-object-histogram-logarithmic
+Name=Spectral analysis
