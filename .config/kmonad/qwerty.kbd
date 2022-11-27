@@ -15,6 +15,7 @@
   ue RA-u
   sz RA-s
 
+  CSd C-S-d
   CSn C-S-n
 
   tbq M-C-A-q
@@ -59,18 +60,18 @@
 )
 
 (deflayer qwerty
-  _    _    _    _    _    _    _    _    _    _    _    [    ]    _
-  @tab _    _    @num _    _    _    _    _    _    _    -    =
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  @tab _    _    @num _    _    _    _    _    _    _    _    _
   @cps @a   @s   @d   @f   _    _    @j   @k   @l   _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _              @spc           @han _    _    _
 )
 
 (deflayer nav
-  _    _    _    _    _    _    _    _    *    \(   \)   {    }    _
-  _    _    @Stb spc  tab  @Atb @At2 bspc up   del  :    \_   +
-  _    @Ca  @esc @bsp @ret pgup home left down rght end  "    |    _
-  _    _    _    C-y C-z del  pgdn _    C-c C-v C-x ?    _
+  _    S-1  _    pgup pgdn _    _    _    *    \(   \)   \_   +    _
+  _    _    @Stb spc  tab  @Atb @At2 bspc up   del  :    {    }
+  _    @Ca  @esc @bsp @ret C-d  home left down rght end  "    |    _
+  _    _    _    C-y  C-z  del  @CSd _    C-c  C-v  C-x  ?    _
   _    _    _              XX             _    _    _    _
 )
 
