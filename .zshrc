@@ -5,8 +5,9 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export OPENER="codium"
 export PAGER="bat"
 export GOPATH="$HOME/.go"
+export PATH="$PATH:~/.local/bin"
 export LC_ALL="en_US.UTF-8"
-export PATH=$PATH:~/.local/bin
+export LC_CTYPE="en_US.UTF-8"
 
 # Needed for yadm file encryption
 export GPG_TTY=$(tty)
