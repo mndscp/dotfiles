@@ -18,6 +18,8 @@ alias fs="yay -S"
 alias fdu="fd -uu -E /mnt"
 alias fe="fzf -e"
 alias gh="cd ~"
+alias gub="gulp build"
+alias gud="gulp dev"
 alias l="exa"
 alias ll="exa -al"
 alias ls.="exa -d .*"
@@ -32,7 +34,6 @@ alias wr="wormhole receive"
 alias ws="wormhole send"
 alias y="yay"
 alias yr="yay -Rns"
-alias yrn="yay -Rns"
 alias ys="yay -S"
 alias yt="yt-dlp"
 
@@ -45,25 +46,25 @@ alias cz="$OPENER ~/.zshrc"
 
 # git
 alias ga.="git add ."
-alias gau="git add -u"
 alias gb="git branch"
 alias gbd="git branch -d"
 alias gbr="git branch -r"
 alias gc='git checkout'
 alias gcb='git checkout -b'
 alias gcl='git clone'
-alias gcm='git checkout master; git pull --prune'
-alias gcmain='git checkout main; git pull --prune'
-alias gd='git diff'
+alias gcm='git checkout master && git pull --prune'
+alias gcma='git checkout main && git pull --prune'
+alias gdf='git diff'
 alias gmom='git merge origin master'
+alias gmoma='git merge origin main'
 alias gp='git pull --prune'
 alias gpu='git push'
 alias gr='git remote -v'
-alias gs='git stash -u'
+alias gs='git status'
 alias gsa='git stash apply'
 alias gsl='git stash list'
 alias gsp='git stash pop'
-alias gst='git status'
+alias gst='git stash -u'
 
 # npm
 alias na='npm audit'
@@ -77,6 +78,8 @@ alias nlg='npm ls -g --depth=0'
 alias nr='npm run'
 alias nrb='npm run build'
 alias nrd='npm run dev'
+alias nrl='npm run lint'
+alias nrsl='npm run stylelint'
 alias nrmd="npm r -D"
 alias nrmg="npm r -g"
 alias nrod="npm run rollup:dev"
@@ -91,7 +94,6 @@ alias prod="npm run rollup:prod"
 # yadm
 alias ya="yadm"
 alias yaa="yadm add"
-alias yaau="yadm add -u"
 alias yac="yadm commit -m 'Update' && yadm push"
 alias yadf="yadm diff"
 alias yade="yadm decrypt"
@@ -99,6 +101,8 @@ alias yae="yadm encrypt"
 alias yal="yadm list"
 alias yap="yadm pull"
 alias yapu="yadm push"
+alias yarm="yadm rm --cached"
 alias yars="yadm reset"
 alias yas="yadm status"
 alias yau="yadm add -u"
+alias yauc="yau && yac"

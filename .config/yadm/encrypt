@@ -4,9 +4,22 @@
 .npmrc
 .ssh/*
 
+.local/bin/chats
+.local/bin/chx
+.local/bin/gcla
+.local/bin/gcld
+.local/bin/gclf
+.local/bin/gclg
+.local/bin/gclk
+.local/bin/gcls
 .local/bin/sb
+.local/bin/spectral
+
 .local/share/color-schemes
 .local/share/puddletag/actions
+.local/share/kio/servicemenus/alacrittyhere.desktop
+.local/share/kio/servicemenus/puddletag.desktop
+.local/share/kio/servicemenus/spectral.desktop
 
 .config/audacious/config
 .config/audacious/QtUi.conf

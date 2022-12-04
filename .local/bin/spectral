@@ -1,3 +1,0 @@
-#!/bin/zsh
-
-sox "$1" -n remix 2 trim 95 8 spectrogram -x 1656 -w Kaiser -c "" -o "$1".png
