@@ -30,16 +30,16 @@ window:
   # must be at least `2`, while using a value of `0` for columns and lines will
   # fall back to the window manager's recommended size.
   dimensions:
-   columns: 139
-   lines: 70
+    columns: 139
+    lines: 70
 
   # Window position (changes require restart)
   #
   # Specified in number of pixels.
   # If the position is not set, the window manager will handle the placement.
   position:
-   x: 1280
-   y: 0
+    x: 1280
+    y: 0
 
   # Window padding (changes require restart)
   #
@@ -61,13 +61,13 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
-  decorations: full
+  decorations: none
 
   # Background opacity
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  opacity: 1
+  opacity: 0.92
 
   # Startup Mode (changes require restart)
   #
@@ -192,8 +192,8 @@ font:
 colors:
   # Default colors
   primary:
-   background: '#1c1c1c'
-   foreground: '#c6c6c6'
+    background: '#1c1c1c'
+    foreground: '#c6c6c6'
 
     # Bright and dim foreground colors
     #
@@ -281,25 +281,25 @@ colors:
 
   # Normal colors
   normal:
-   black:   '#555555'
-   red:     '#F07178'
-   green:   '#C3E88D'
-   yellow:  '#FFCB6B'
-   blue:    '#82AAFF'
-   magenta: '#C792EA'
-   cyan:    '#89DDFF'
-   white:   '#FFFFFF'
+    black:   '#555555'
+    red:     '#F07178'
+    green:   '#C3E88D'
+    yellow:  '#FFCB6B'
+    blue:    '#82AAFF'
+    magenta: '#C792EA'
+    cyan:    '#89DDFF'
+    white:   '#FFFFFF'
 
   # Bright colors
   bright:
-   black:   '#666666'
-   red:     '#F07178'
-   green:   '#C3E88D'
-   yellow:  '#FFCB6B'
-   blue:    '#82AAFF'
-   magenta: '#C792EA'
-   cyan:    '#89DDFF'
-   white:   '#FFFFFF'
+    black:   '#666666'
+    red:     '#F07178'
+    green:   '#C3E88D'
+    yellow:  '#FFCB6B'
+    blue:    '#82AAFF'
+    magenta: '#C792EA'
+    cyan:    '#89DDFF'
+    white:   '#FFFFFF'
 
   # Dim colors
   #
@@ -434,9 +434,13 @@ live_config_reload: true
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
 shell:
- program: /bin/zsh
-#  args:
-#    - --login
+  program: /usr/bin/zsh
+  # args:
+  #   - new-session
+  #   - -A
+  #   - -D
+  #   - -s
+  #   - main
 
 # Startup directory
 #

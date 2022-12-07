@@ -27,6 +27,7 @@ alias lsd="exa -D"
 alias nf="neofetch"
 alias pd="popd"
 alias rgd="rg -g '!dist/*'"
+alias rgi="rg -i"
 alias rm="trash"
 alias sv="sudo nvim"
 alias v="nvim"
@@ -39,9 +40,11 @@ alias yt="yt-dlp"
 
 # Config
 alias ca="$OPENER ~/.aliases"
+alias cala="$OPENER ~/.config/alacritty/alacritty.yml"
 alias ce="$OPENER ~/.config/espanso/match/base.yml"
 alias ck="$OPENER ~/.config/kmonad/qwerty.kbd"
 alias clf="$OPENER ~/.config/lf/lfrc"
+alias ct="$OPENER ~/.tmux.conf"
 alias cz="$OPENER ~/.zshrc"
 
 # git
@@ -88,6 +91,7 @@ alias nrtj="npm run test:js"
 alias nrtju="npm run test-update-snapshot:js"
 alias nrtp="npm run test:php"
 alias nrtpu="npm run test-update-snapshot:php"
+alias nrw="npm run watch"
 alias nu="npm update"
 alias prod="npm run rollup:prod"
 

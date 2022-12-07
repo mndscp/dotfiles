@@ -17,6 +17,7 @@
 
 .local/share/color-schemes
 .local/share/puddletag/actions
+.local/share/kio/servicemenus/add-to-playlist.desktop
 .local/share/kio/servicemenus/alacrittyhere.desktop
 .local/share/kio/servicemenus/puddletag.desktop
 .local/share/kio/servicemenus/spectral.desktop
@@ -31,6 +32,7 @@
 .config/fsearch/fsearch.conf
 .config/khotkeysrc
 .config/kmahjonggrc
+.config/kwinrulesrc
 .config/lf/*
 .config/Mailspring/config.json
 .config/Mailspring/keymap.json
