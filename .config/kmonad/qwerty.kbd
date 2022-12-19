@@ -38,25 +38,25 @@
 
   han KeyHangeul
 
-  a (tap-hold-next-release 250 a lmet)
-  s (tap-hold-next-release 250 s lalt)
-  d (tap-hold-next-release 250 d lctl)
-  f (tap-hold-next-release 250 f lsft)
-  j (tap-hold-next-release 250 j rsft)
-  k (tap-hold-next-release 250 k lctl)
-  l (tap-hold-next-release 250 l lalt)
+  a (tap-hold-next-release 300 a lmet)
+  s (tap-hold-next-release 300 s lalt)
+  d (tap-hold-next-release 300 d lctl)
+  f (tap-hold-next-release 300 f lsft)
+  j (tap-hold-next-release 300 j rsft)
+  k (tap-hold-next-release 300 k lctl)
+  l (tap-hold-next-release 300 l lalt)
 
-  Ca (tap-hold-next-release 250 C-a lctl)
-  esc (tap-hold-next-release 250 esc lalt)
-  bsp (tap-hold-next-release 250 bspc lctl)
-  ret (tap-hold-next-release 250 ret lsft)
+  Ca (tap-hold-next-release 300 C-a lctl)
+  esc (tap-hold-next-release 300 esc lalt)
+  bsp (tap-hold-next-release 300 bspc lctl)
+  ret (tap-hold-next-release 300 ret lsft)
   f12 (tap-hold-next-release 200 f12 lsft)
 
-  tab (tap-hold-next-release 250 tab (layer-toggle tab))
-  sym (tap-hold-next-release 250 ralt (layer-toggle sym))
-  num (tap-hold-next-release 250 e (layer-toggle num))
-  spc (tap-hold-next-release 250 spc (layer-toggle nav))
-  cps (tap-hold-next-release 250 esc (layer-toggle ctl))
+  tab (tap-hold-next-release 300 tab (layer-toggle tab))
+  sym (tap-hold-next-release 300 ralt (layer-toggle sym))
+  num (tap-hold-next-release 300 e (layer-toggle num))
+  spc (tap-hold-next-release 300 spc (layer-toggle nav))
+  cps (tap-hold-next-release 300 esc (layer-toggle ctl))
 )
 
 (defsrc
