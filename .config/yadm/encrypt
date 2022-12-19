@@ -6,9 +6,9 @@
 
 .local/bin/add-to-playlist
 .local/bin/chats
-.local/bin/chromium-search
 .local/bin/chx
 .local/bin/gcl*
+.local/bin/search-site
 .local/bin/sb
 .local/bin/spectral
 
