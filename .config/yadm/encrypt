@@ -4,14 +4,11 @@
 .npmrc
 .ssh/*
 
+.local/bin/add-to-playlist
 .local/bin/chats
+.local/bin/chromium-search
 .local/bin/chx
-.local/bin/gcla
-.local/bin/gcld
-.local/bin/gclf
-.local/bin/gclg
-.local/bin/gclk
-.local/bin/gcls
+.local/bin/gcl*
 .local/bin/sb
 .local/bin/spectral
 
