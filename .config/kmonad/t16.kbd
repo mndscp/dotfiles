@@ -35,6 +35,9 @@
   tbs M-C-A-s
   tbd M-C-A-d
   tbf M-C-A-f
+  tbz M-C-A-z
+  tbx M-C-A-x
+  tbc M-C-A-c
 
   han KeyHangeul
 
@@ -111,7 +114,7 @@
   _    C-1  C-2  prnt _    _    _    _    _    _    _    _    _    _
   XX   @tbq @tbw @tbe @tbr @tbt _    _    _    _    _    _    _
   _    @tba @tbs @tbd @tbf _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    @tbz @tbx @tbc _    _    _    _    _    _    _    _
   _    _    @CSn           @f12           _    _    _    _
 )
 
