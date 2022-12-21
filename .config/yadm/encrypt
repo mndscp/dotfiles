@@ -11,6 +11,7 @@
 .local/bin/search-site
 .local/bin/sb
 .local/bin/spectral
+.local/bin/websearch
 
 .local/share/color-schemes
 .local/share/puddletag/actions
