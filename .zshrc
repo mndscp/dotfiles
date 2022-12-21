@@ -12,6 +12,8 @@ export LC_CTYPE="en_US.UTF-8"
 # Needed for yadm file encryption
 export GPG_TTY=$(tty)
 
+bindkey -e
+
 # Source file if it exists
 function source_file() {
   [ -f "$1" ] && source "$1"
