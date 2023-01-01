@@ -5,7 +5,7 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export OPENER="codium"
 export PAGER="bat"
 export GOPATH="$HOME/.go"
-export PATH=$PATH:~/.local/bin
+export PATH="$PATH:~/.local/bin"
 export LC_ALL="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
 
@@ -21,8 +21,8 @@ function source_file() {
 
 # Clone plugin if needed and source it
 function source_zsh_plugin() {
-  ZDIR=$HOME/.zsh
-  PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
+  ZDIR="$HOME/.zsh"
+  PLUGIN_NAME="$(echo "$1" | cut -d '/' -f 2)"
 
   if ! [ -d "$ZDIR/$PLUGIN_NAME" ]; then
     git clone "https://github.com/$1.git" "$ZDIR/$PLUGIN_NAME"
@@ -33,10 +33,10 @@ function source_zsh_plugin() {
 }
 
 # Import aliases and load them them as session abbreviations
-source_file ~/.aliases && source_zsh_plugin "olets/zsh-abbr" && abbr -S -q import-aliases
+source_file ~/.aliases && source_zsh_plugin olets/zsh-abbr && abbr -S -q import-aliases
 
 # Plugins (order is important)
-source_zsh_plugin Aloxaf/fzf-tab
+# source_zsh_plugin Aloxaf/fzf-tab
 source_zsh_plugin zsh-users/zsh-autosuggestions
 source_zsh_plugin zsh-users/zsh-syntax-highlighting
 source_zsh_plugin zsh-users/zsh-history-substring-search
@@ -72,13 +72,13 @@ export FZF_DEFAULT_OPTS="-e"
 export FZF_CTRL_T_COMMAND="fd --hidden --search-path $HOME"
 export FZF_CTRL_T_OPTS="-e --preview 'pistol {}'"
 export FZF_ALT_C_COMMAND="fd --type d . --hidden --search-path $HOME"
-source_file "/usr/share/fzf/completion.zsh"
-source_file "/usr/share/fzf/key-bindings.zsh"
+source_file /usr/share/fzf/completion.zsh
+source_file /usr/share/fzf/key-bindings.zsh
 
 # History
 HISTFILE=~/.cache/zsh/history
 HISTSIZE=10000
-SAVEHIST=$HISTSIZE
+SAVEHIST="$HISTSIZE"
 setopt EXTENDED_HISTORY
 setopt HIST_FIND_NO_DUPS
 setopt HIST_IGNORE_ALL_DUPS
@@ -105,7 +105,7 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 
 zstyle ':completion:*' list-suffixes
 zstyle ':completion:*' expand prefix suffix
 
-zstyle :compinstall filename '~/.zshrc'
+zstyle :compinstall filename ~/.zshrc
 zmodload zsh/complist
 compinit
 
@@ -123,24 +123,23 @@ bindkey "^[[B" history-substring-search-down
 
 # Archive extraction
 # usage: ex <file>
-ex ()
-{
-  if [ -f $1 ]; then
-    case $1 in
-      *.tar.bz2)   tar xjf $1 ;;
-      *.tar.gz)    tar xzf $1 ;;
-      *.bz2)       bunzip2 $1 ;;
-      *.rar)       unrar x $1 ;;
-      *.gz)        gunzip $1  ;;
-      *.tar)       tar xf $1  ;;
-      *.tbz2)      tar xjf $1 ;;
-      *.tgz)       tar xzf $1 ;;
-      *.zip)       unzip $1 ;;
-      *.Z)         uncompress $1 ;;
-      *.7z)        7z x $1 ;;
-      *.deb)       ar x $1 ;;
-      *.tar.xz)    tar xf $1 ;;
-      *.tar.zst)   unzstd $1 ;;
+ex() {
+  if [ -f "$1" ]; then
+    case "$1" in
+      *.tar.bz2)   tar xjf "$1" ;;
+      *.tar.gz)    tar xzf "$1" ;;
+      *.bz2)       bunzip2 "$1" ;;
+      *.rar)       unrar x "$1" ;;
+      *.gz)        gunzip "$1"  ;;
+      *.tar)       tar xf "$1"  ;;
+      *.tbz2)      tar xjf "$1" ;;
+      *.tgz)       tar xzf "$1" ;;
+      *.zip)       unzip "$1" ;;
+      *.Z)         uncompress "$1" ;;
+      *.7z)        7z x "$1" ;;
+      *.deb)       ar x "$1" ;;
+      *.tar.xz)    tar xf "$1" ;;
+      *.tar.zst)   unzstd "$1" ;;
       *)           echo "'$1' cannot be extracted via ex()" ;;
     esac
   fi
@@ -160,7 +159,7 @@ lfcd () {
 bindkey -s '^o' 'lfcd\n'
 
 # nvm
-source_file "/usr/share/nvm/init-nvm.sh"
+source_file /usr/share/nvm/init-nvm.sh
 
 # fzf-tab
 # disable sort when completing `git checkout`
