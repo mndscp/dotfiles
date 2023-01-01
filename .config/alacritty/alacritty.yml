@@ -41,7 +41,7 @@ colors:
     foreground: '#c6c6c6'
 
   normal:
-    black:   '#1d1d1d'
+    black:   '#666666'
     red:     '#F07178'
     green:   '#C3E88D'
     yellow:  '#FFCB6B'
@@ -51,7 +51,7 @@ colors:
     white:   '#FFFFFF'
 
   bright:
-    black:   '#222222'
+    black:   '#444444'
     red:     '#F07178'
     green:   '#C3E88D'
     yellow:  '#FFCB6B'
@@ -60,6 +60,7 @@ colors:
     cyan:    '#89DDFF'
     white:   '#FFFFFF'
 
-live_config_reload: true
 shell:
   program: /usr/bin/zsh
+
+live_config_reload: true

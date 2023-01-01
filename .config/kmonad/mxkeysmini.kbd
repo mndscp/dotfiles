@@ -1,0 +1,182 @@
+(defcfg
+  input (device-file "/dev/input/event4")
+  output (uinput-sink "KMonad output")
+  fallthrough true
+  allow-cmd true
+)
+
+(defalias
+  Atb A-tab
+  At2 (around lalt #(tab P50 tab))
+  Stb S-tab
+  Cac #(C-a C-c)
+  Cav #(C-a C-v)
+
+  Xz (tap-hold-next 35 z (layer-toggle Lz) :timeout-button z)
+  Xx (tap-hold-next 35 x (layer-toggle Lx) :timeout-button x)
+  Xc (tap-hold-next 35 c (layer-toggle Lc) :timeout-button c)
+  Xv (tap-hold-next 35 v (layer-toggle Lv) :timeout-button v)
+  Xb (tap-hold-next 35 b (layer-toggle Lb) :timeout-button b)
+
+  ae RA-a
+  oe RA-o
+  ue RA-u
+  sz RA-s
+
+  CSd C-S-d
+  CSn C-S-n
+
+  tbq M-C-A-q
+  tbw M-C-A-w
+  tbe M-C-A-e
+  tbr M-C-A-r
+  tbt M-C-A-t
+  tba M-C-A-a
+  tbs M-C-A-s
+  tbd M-C-A-d
+  tbf M-C-A-f
+  tbz M-C-A-z
+  tbx M-C-A-x
+  tbc M-C-A-c
+
+  han KeyHangeul
+
+  a (tap-hold-next-release 280 a lmet)
+  s (tap-hold-next-release 280 s lalt)
+  d (tap-hold-next-release 280 d lctl)
+  e (tap-hold-next-release 200 e (layer-toggle num))
+  f (tap-hold-next-release 280 f lsft)
+  i (tap-hold-next-release 200 i (layer-toggle sym))
+  j (tap-hold-next-release 280 j rsft)
+  k (tap-hold-next-release 280 k lctl)
+  l (tap-hold-next-release 280 l lalt)
+
+  Ca (tap-hold-next-release 200 C-a lctl)
+  Cs (tap-hold-next-release 200 C-s lalt)
+  esc (tap-hold-next-release 200 esc lalt)
+  bsp (tap-hold-next-release 200 bspc lctl)
+  ret (tap-hold-next-release 200 ret lsft)
+  f12 (tap-hold-next-release 200 f12 lsft)
+
+  tab (tap-hold-next-release 200 tab (layer-toggle tab))
+  sym (tap-hold-next-release 200 ralt (layer-toggle sym))
+  spc (tap-hold-next-release 200 spc (layer-toggle nav))
+  cps (tap-hold-next-release 200 esc (layer-toggle ctl))
+)
+
+(defsrc
+  esc                                                              del
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]
+  caps a    s    d    f    g    h    j    k    l    ;    '    \    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet cmp  rctl
+)
+
+(deflayer qwerty
+  _                                                                pp
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  @tab _    _    @e   _    _    _    _    @i   _    _    _    _
+  @cps @a   @s   @d   @f   _    _    @j   @k   @l   _    _    _    _
+  _    @Xz  @Xx  @Xc  @Xv  @Xb  _    _    _    _    _    _
+  _    _    _              @spc           @han _    _    _
+)
+
+(deflayer nav
+  _                                                                _
+  _    S-1  _    pgup pgdn _    _    _    *    \(   \)   \_   +    _
+  _    _    @Stb spc  tab  @Atb @At2 bspc up   del  :    {    }
+  _    @Ca  @Cs  @bsp @ret C-d  home left down rght end  "    |    _
+  _    _    C-y  C-z  del  @CSd _    C-c  C-v  C-x  ?    _
+  _    _    _              XX             _    _    _    _
+)
+
+(deflayer sym
+  _                                                                _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    S-/  S-1  _    _    spc  XX   _    _    _    _
+  _    {    [    \(   \)   ]    }    bspc _    _    _    _    _    _
+  _    _    C-y  C-z  _    _    _    _    _    _    _    _
+  _    _    _              ret            _    _    _    _
+)
+
+(deflayer ctl
+  _                                                                _
+  _    C-1  C-2  C-3  C-4  C-5  C-6  C-7  C-8  C-9  C-0  _    _    _
+  _    C-q  C-w  C-e  C-r  C-t  _    _    _    _    _    _    _
+  XX   C-a  C-s  C-d  C-f  C-g  C-h  @ae  @oe  @ue  @sz  _    _    _
+  _    C-z  C-x  C-c  C-v  C-b  _    _    _    _    _    _
+  _    _    bspc           @ret           _    _    _    _
+)
+
+(deflayer num
+  _                                                                _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    @Stb XX   tab  _    /    7    8    9    *    _    _
+  _    _    _    _    lsft lsft +    4    5    6    .    _    _    _
+  _    _    _    _    _    _    -    1    2    3    _    _
+  _    _    _              0              _    _    _    _
+)
+
+(deflayer tab
+  _                                                                _
+  _    C-1  C-2  prnt _    _    _    _    _    _    _    _    _    _
+  XX   @tbq @tbw @tbe @tbr @tbt _    _    _    _    _    _    _
+  _    @tba @tbs @tbd @tbf _    _    _    _    _    _    _    _    _
+  _    @tbz @tbx @tbc _    _    _    _    _    _    _    _
+  _    _    @CSn           @f12           _    _    _    _
+)
+
+(deflayer Lz
+  _                                                                _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    C-a  @Cac _    _    _    _    _    _    _
+  _    _    _              _              _    _    _    _
+)
+
+(deflayer Lx
+  _                                                                _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    C-x  C-c  _    _    _    _    _    _    _
+  _    _    _              _              _    _    _    _
+)
+
+(deflayer Lc
+  _                                                                _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    C-a  C-x  _    C-v  _    _    _    _    _    _    _
+  _    _    _              _              _    _    _    _
+)
+
+(deflayer Lv
+  _                                                                _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    @Cac C-c  C-v  _    @Cav _    _    _    _    _    _
+  _    _    _              _              _    _    _    _
+)
+
+(deflayer Lb
+  _                                                                _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    @Cav _    _    _    _    _    _    _
+  _    _    _              _              _    _    _    _
+)
+
+;; (deflayer template
+;;   _                                                                _
+;;   _    _    _    _    _    _    _    _    _    _    _    _    _    _
+;;   _    _    _    _    _    _    _    _    _    _    _    _    _
+;;   _    _    _    _    _    _    _    _    _    _    _    _    _    _
+;;   _    _    _    _    _    _    _    _    _    _    _    _
+;;   _    _    _              _              _    _    _    _
+;; )
