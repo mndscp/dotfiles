@@ -5,7 +5,7 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export OPENER="codium"
 export PAGER="bat"
 export GOPATH="$HOME/.go"
-export PATH="$PATH:~/.local/bin"
+export PATH=$PATH:~/.local/bin
 export LC_ALL="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
 
@@ -36,7 +36,7 @@ function source_zsh_plugin() {
 source_file ~/.aliases && source_zsh_plugin olets/zsh-abbr && abbr -S -q import-aliases
 
 # Plugins (order is important)
-# source_zsh_plugin Aloxaf/fzf-tab
+source_zsh_plugin Aloxaf/fzf-tab
 source_zsh_plugin zsh-users/zsh-autosuggestions
 source_zsh_plugin zsh-users/zsh-syntax-highlighting
 source_zsh_plugin zsh-users/zsh-history-substring-search
