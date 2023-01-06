@@ -13,7 +13,7 @@ window:
 
   dynamic_padding: true
   decorations: none
-  opacity: 0.92
+  opacity: 1
   dynamic_title: true
   # startup_mode: Maximized
 
