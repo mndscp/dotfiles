@@ -61,6 +61,7 @@ colors:
     white:   '#FFFFFF'
 
 shell:
-  program: /usr/bin/zsh
+  program: /usr/bin/tmux
+  # program: /usr/bin/zsh
 
 live_config_reload: true
