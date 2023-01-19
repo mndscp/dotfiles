@@ -9,6 +9,7 @@
 .local/bin/add-to-playlist
 .local/bin/chats
 .local/bin/chx
+.local/bin/km
 .local/bin/new
 .local/bin/sb
 .local/bin/spectral
