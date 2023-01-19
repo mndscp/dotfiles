@@ -9,7 +9,7 @@
 .local/bin/add-to-playlist
 .local/bin/chats
 .local/bin/chx
-.local/bin/gcl*
+.local/bin/new
 .local/bin/sb
 .local/bin/spectral
 .local/bin/websearch
@@ -47,5 +47,6 @@
 .config/puddletag/puddletag.conf
 .config/puddletag/tagpanel
 .config/puddletag/user_shortcuts
+.config/soundconverterrc
 .config/transmission-remote-gtk/config.json
 .config/whatscli/whatscli.config
