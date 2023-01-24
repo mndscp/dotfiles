@@ -2,7 +2,7 @@
 export EDITOR="nvim"
 export EXA_ICON_SPACING="2"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-export OPENER="codium"
+export OPENER="code"
 export PAGER="bat"
 export GOPATH="$HOME/.go"
 export PATH=$PATH:~/.local/bin
