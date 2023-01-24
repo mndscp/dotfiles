@@ -25,6 +25,7 @@
 .config/audacious/config
 .config/audacious/QtUi.conf
 .config/autostart/*
+.config/dolphinrc
 .config/espanso/**/*
 .config/filezilla/*
 .config/flacon/flacon.conf
