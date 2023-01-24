@@ -15,12 +15,12 @@ export GPG_TTY=$(tty)
 bindkey -e
 
 # Source file if it exists
-function source_file() {
+source_file() {
   [ -f "$1" ] && source "$1"
 }
 
 # Clone plugin if needed and source it
-function source_zsh_plugin() {
+source_zsh_plugin() {
   ZDIR="$HOME/.zsh"
   PLUGIN_NAME="$(echo "$1" | cut -d '/' -f 2)"
 
@@ -146,17 +146,17 @@ ex() {
 }
 
 # Stay in last lf directory on exit
-lfcd () {
+lfcd() {
   tmp="$(mktemp)"
+
   lf -last-dir-path="$tmp" "$@"
+
   if [ -f "$tmp" ]; then
     dir="$(cat "$tmp")"
     rm -f "$tmp"
     [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
   fi
 }
-
-bindkey -s '^o' 'lfcd\n'
 
 # nvm
 source_file /usr/share/nvm/init-nvm.sh
