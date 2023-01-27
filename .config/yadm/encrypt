@@ -4,17 +4,9 @@
 .npmrc
 .ssh/*
 
-.zzz/**/*
+.local/bin/*
 
-.local/bin/add-to-playlist
-.local/bin/chx
-.local/bin/km
-.local/bin/new
-.local/bin/sb
-.local/bin/spectral
-.local/bin/start
-.local/bin/stop
-.local/bin/websearch
+.zzz/**/*
 
 .local/share/color-schemes
 .local/share/puddletag/actions
