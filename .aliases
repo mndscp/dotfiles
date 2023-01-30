@@ -49,7 +49,7 @@ alias ws="wormhole send"
 alias y="yay"
 alias yr="yay -Rns"
 alias ys="yay -S"
-alias yt="yt-dlp"
+# alias yt="yt-dlp"
 
 # Config
 alias ca="$OPENER ~/.aliases"
