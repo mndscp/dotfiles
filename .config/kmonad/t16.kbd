@@ -81,7 +81,7 @@
 
 (deflayer nav
   _    S-1  _    pgup pgdn _    _    _    *    \(   \)   \_   +    _
-  _    _    @Stb spc  tab  @Atb @At2 bspc up   del  :    {    }
+  prnt _    @Stb spc  tab  @Atb @At2 bspc up   del  :    {    }
   _    @Ca  @esc @bsp @ret C-d  home left down rght end  "    |    _
   _    _    @CSc C-y  C-z  del  @CSd _    C-c  C-v  C-x  ?    _
   _    _    _              XX             _    _    _    _

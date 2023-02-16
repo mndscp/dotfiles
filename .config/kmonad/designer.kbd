@@ -86,7 +86,7 @@
 (deflayer nav
   _                                                                _
   _    S-1  _    pgup pgdn _    _    _    *    \(   \)   \_   +    _
-  _    _    @Stb spc  tab  @Atb @At2 bspc up   del  :    {    }
+  prnt _    @Stb spc  tab  @Atb @At2 bspc up   del  :    {    }
   _    @Ca  @esc @bsp @ret C-d  home left down rght end  "    |    _
   _    @CSc C-y  C-z  del  @CSd _    C-c  C-v  C-x  ?    _
   _    _    _              XX             _    _    _    _
@@ -113,9 +113,9 @@
 (deflayer num
   _                                                                _
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    @Stb XX   tab  _    /    7    8    9    *    _    _
-  _    _    _    _    lsft lsft +    4    5    6    .    _    _    _
-  _    _    _    _    _    _    -    1    2    3    _    _
+  _    _    @Stb XX   tab  _    +    7    8    9    *    _    _
+  _    _    _    _    lsft lsft -    4    5    6    .    _    _    _
+  _    _    _    _    _    _    *    1    2    3    /    _
   _    _    _              0              _    _    _    _
 )
 
