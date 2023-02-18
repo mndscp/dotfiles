@@ -1,7 +1,5 @@
 .cache/zsh/history
 .composer/auth.json
-.gitconfig*
-.npmrc
 .ssh/*
 
 .local/bin/*
@@ -24,6 +22,7 @@
 .config/flacon/flacon.conf
 .config/flameshot/flameshot.ini
 .config/fsearch/fsearch.conf
+.config/git/*
 .config/khotkeysrc
 .config/kmahjonggrc
 .config/kwinrulesrc
@@ -35,7 +34,7 @@
 .config/mpv/input.conf
 .config/mpv/mpv.conf
 .config/nomacs/Image Lounge.conf
-.config/protonvpn/user_configurations.json
+.config/npm/npmrc
 .config/puddletag/combos
 .config/puddletag/function_settings
 .config/puddletag/gensettings

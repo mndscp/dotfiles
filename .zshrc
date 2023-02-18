@@ -1,10 +1,25 @@
+# XDG settings
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_STATE_HOME=$HOME/.local/state
+
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot=$XDG_CONFIG_HOME/java
+export CARGO_HOME=$XDG_DATA_HOME/cargo
+export CUDA_CACHE_PATH=$XDG_CACHE_HOME/nv
+export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+export GOPATH=$HOME/.go
+export GTK2_RC_FILES=$XDG_CONFIG_HOME/gtk-2.0/gtkrc
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
+export NVM_DIR=$XDG_DATA_HOME/nvm
+export XAUTHORITY=$XDG_RUNTIME_DIR/Xauthority
+
 # General settings
 export EDITOR="nvim"
 export EXA_ICON_SPACING="2"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export OPENER="codium"
 export PAGER="bat"
-export GOPATH="$HOME/.go"
 export PATH=$PATH:~/.local/bin
 export LC_ALL="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
