@@ -4,6 +4,8 @@
 
 .local/bin/*
 
+.icons/Qogir-breezehand-cursors/**/*
+
 .zzz/**/*
 
 .local/share/color-schemes
