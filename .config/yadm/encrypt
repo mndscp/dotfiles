@@ -1,11 +1,7 @@
 .cache/zsh/history
 .composer/auth.json
-.ssh/*
-
 .local/bin/*
-
-.icons/Qogir-breezehand-cursors/**/*
-
+.ssh/*
 .zzz/**/*
 
 .local/share/color-schemes
