@@ -81,9 +81,9 @@
 
 (deflayer nav
   _    S-1  _    pgup pgdn _    _    _    *    \(   \)   \_   +    _
-  prnt _    @Stb spc  tab  @Atb @At2 bspc up   del  :    {    }
+  prnt @CSc @Stb spc  tab  @Atb @At2 bspc up   del  :    {    }
   _    @Ca  @esc @bsp @ret C-d  home left down rght end  "    |    _
-  _    _    @CSc C-y  C-z  del  @CSd _    C-c  C-v  C-x  ?    _
+  _    _    C-s C-y  C-z  del  @CSd _    C-c  C-v  C-x  ?    _
   _    _    _              XX             _    _    _    _
 )
 
@@ -96,11 +96,11 @@
 )
 
 (deflayer ctl
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _   C-q  C-w  C-e  C-r  C-t   _    _    _    _    _    _    _
-  XX  C-a  C-s  C-d  C-f  C-g  C-h   @ae  @oe  @ue  @sz  _    _    _
-  _   _    C-z  C-x  C-c  C-v  C-b   _    _    _    _    _    _
-  _   _    bspc           @ret            _    _    _    _
+  _    C-1  C-2  C-3  C-4  C-5  _    _    _    _    _    _    _    _
+  _    C-q  C-w  C-e  C-r  C-t  _    _    _    _    _    _    _
+  XX   C-a  C-s  C-d  C-f  C-g  C-h  @ae  @oe  @ue  @sz  _    _    _
+  _    _    C-z  C-x  C-c  C-v  C-b  _    _    _    _    _    _
+  _    _    bspc           @ret           _    _    _    _
 )
 
 (deflayer num
@@ -112,7 +112,7 @@
 )
 
 (deflayer tab
-  _    C-1  C-2  prnt _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
   XX   @tbq @tbw @tbe @tbr @tbt _    _    _    _    _    _    _
   _    @tba @tbs @tbd @tbf _    _    _    _    _    _    _    _    _
   _    _    @tbz @tbx @tbc _    _    _    _    _    _    _    _
