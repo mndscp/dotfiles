@@ -1,6 +1,6 @@
 (defcfg
-  input (device-file "/dev/input/event22")
-  output (uinput-sink "KMonad output")
+  input (device-file "/dev/input/event19")
+  output (uinput-sink "KMonad output designer")
   fallthrough true
   allow-cmd true
 )
@@ -86,9 +86,9 @@
 (deflayer nav
   _                                                                _
   _    S-1  _    pgup pgdn _    _    _    *    \(   \)   \_   +    _
-  prnt _    @Stb spc  tab  @Atb @At2 bspc up   del  :    {    }
+  prnt @CSc @Stb spc  tab  @Atb @At2 bspc up   del  :    {    }
   _    @Ca  @esc @bsp @ret C-d  home left down rght end  "    |    _
-  _    @CSc C-y  C-z  del  @CSd _    C-c  C-v  C-x  ?    _
+  _    C-s  C-y  C-z  del  @CSd _    C-c  C-v  C-x  ?    _
   _    _    _              XX             _    _    _    _
 )
 
@@ -131,8 +131,8 @@
 (deflayer Lz
   _                                                                _
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    up   _    _    _    _    _    _    _    _    _
+  _    _    left down rght _    _    _    _    _    _    _    _    _
   _    _    _    C-a  @Cac _    _    _    _    _    _    _
   _    _    _              _              _    _    _    _
 )
