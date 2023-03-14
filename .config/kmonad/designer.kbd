@@ -1,5 +1,5 @@
 (defcfg
-  input (device-file "/dev/input/event19")
+  input (device-file "/dev/input/event22")
   output (uinput-sink "KMonad output designer")
   fallthrough true
   allow-cmd true
