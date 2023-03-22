@@ -27,6 +27,14 @@
   CSd C-S-d
   CSn C-S-n
 
+  CX0 C-A-M-0
+  CX1 C-A-M-1
+  CX2 C-A-M-2
+  CX3 C-A-M-3
+  CX4 C-A-M-4
+  CX5 C-A-M-5
+  CX6 C-A-M-6
+
   tbq M-C-A-q
   tbw M-C-A-w
   tbe M-C-A-e
@@ -55,6 +63,7 @@
   bsp (tap-hold-next-release 300 bspc lctl)
   ret (tap-hold-next-release 300 ret lsft)
   f12 (tap-hold-next-release 200 f12 lsft)
+  psc (tap-hold-next-release 200 prnt lsft)
 
   tab (tap-hold-next-release 300 tab (layer-toggle tab))
   sym (tap-hold-next-release 300 ralt (layer-toggle sym))
@@ -80,8 +89,8 @@
 )
 
 (deflayer nav
-  _    S-1  _    pgup pgdn _    _    _    *    \(   \)   \_   +    _
-  prnt @CSc @Stb spc  tab  @Atb @At2 bspc up   del  :    {    }
+  @CX0 @CX1 @CX2 @CX3 @CX4 @CX5 @CX6 _    *    \(   \)   \_   +    _
+  @psc @CSc @Stb spc  tab  @Atb @At2 bspc up   del  :    {    }
   _    @Ca  @esc @bsp @ret C-d  home left down rght end  "    |    _
   _    _    C-s C-y  C-z  del  @CSd _    C-c  C-v  C-x  ?    _
   _    _    _              XX             _    _    _    _
