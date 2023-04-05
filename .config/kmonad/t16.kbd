@@ -1,5 +1,9 @@
 (defcfg
+<<<<<<< Updated upstream
   input (device-file "/dev/input/event2")
+=======
+  input (device-file "/dev/input/event7")
+>>>>>>> Stashed changes
   output (uinput-sink "KMonad output t16")
   fallthrough true
   allow-cmd true
