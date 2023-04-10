@@ -1,8 +1,9 @@
-- 1.1.8
+- 1.1.9
 - _NAME: LIFT VERTICAL ERGONOMIC MOUSE
-  _absent: [hi-res-scroll, hires-smooth-invert, hires-smooth-resolution, hires-scroll-mode, smart-shift, thumb-scroll-invert, thumb-scroll-mode, onboard_profiles,
-    report_rate, pointer_speed, speed-change, backlight, backlight-timed, fn-swap, persistent-remappable-keys, disable-keyboard-keys, crown-smooth, divert-crown,
-    divert-gkeys, m-key-leds, mr-key-led, multiplatform, gesture2-gestures, gesture2-divert, gesture2-params, sidetone, equalizer, scroll-ratchet]
+  _absent: [hi-res-scroll, hires-smooth-invert, hires-smooth-resolution, hires-scroll-mode, scroll-ratchet, smart-shift, thumb-scroll-invert, thumb-scroll-mode,
+    onboard_profiles, report_rate, pointer_speed, speed-change, backlight, backlight-timed, fn-swap, persistent-remappable-keys, disable-keyboard-keys,
+    crown-smooth, divert-crown, divert-gkeys, m-key-leds, mr-key-led, multiplatform, gesture2-gestures, gesture2-divert, gesture2-params, sidetone, equalizer,
+    adc_power_management]
   _battery: 4100
   _modelId: B03100000000
   _sensitive: {divert-keys: false, reprogrammable-keys: false}
@@ -15,10 +16,6 @@
   lowres-scroll-mode: false
   reprogrammable-keys: {82: 82, 83: 83, 86: 86, 253: 253}
 - _NAME: MX Keys Mini
-  _absent: [hi-res-scroll, lowres-scroll-mode, hires-smooth-invert, hires-smooth-resolution, hires-scroll-mode, scroll-ratchet, smart-shift, thumb-scroll-invert,
-    thumb-scroll-mode, onboard_profiles, report_rate, pointer_speed, dpi, speed-change, backlight-timed, reprogrammable-keys, persistent-remappable-keys,
-    crown-smooth, divert-crown, divert-gkeys, m-key-leds, mr-key-led, gesture2-gestures, gesture2-divert, gesture2-params, sidetone, equalizer]
-  _battery: 4100
   _modelId: B36900000000
   _sensitive: {backlight: false, multiplatform: false}
   _serial: 0B8BA64E
