@@ -1,5 +1,5 @@
 (defcfg
-  input (device-file "/dev/input/event2")
+  input (device-file "/dev/input/event12")
   output (uinput-sink "KMonad output trackpoint")
   fallthrough true
   allow-cmd true
@@ -105,7 +105,7 @@
 )
 
 (deflayer ctl
-  _    C-1  C-2  C-3  C-4  C-5  _    _    _    _    _    _    _    _
+  _    C-1  C-2  C-3  C-4  C-5  _    _    _    _    C-0  C--  C-=  _
   _    C-q  C-w  C-e  C-r  C-t  _    _    _    _    _    _    _
   XX   C-a  C-s  C-d  C-f  C-g  C-h  @ae  @oe  @ue  @sz  _    _    _
   _    _    C-z  C-x  C-c  C-v  C-b  _    _    _    _    _    _
