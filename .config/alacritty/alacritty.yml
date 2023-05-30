@@ -14,7 +14,7 @@ window:
   dynamic_padding: true
   decorations: none
   dynamic_title: true
-  # startup_mode: Maximized
+  startup_mode: Maximized
 
 scrolling:
   history: 10000
