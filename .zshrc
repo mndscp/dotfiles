@@ -25,7 +25,7 @@ export LC_CTYPE="en_US.UTF-8"
 export GPG_TTY=$(tty)
 
 bindkey -e
-bindkey -s "^f" "lfcd\n"
+bindkey -s "^f" " lfcd\n"
 
 # Source file if it exists
 source_file() {
