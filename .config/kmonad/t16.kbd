@@ -1,5 +1,5 @@
 (defcfg
-  input (device-file "/dev/input/event5")
+  input (device-file "/dev/input/event4")
   output (uinput-sink "KMonad output t16")
   fallthrough true
   allow-cmd true
@@ -50,13 +50,13 @@
 
   han KeyHangeul
 
-  a (tap-hold-next-release 300 a lmet)
-  s (tap-hold-next-release 300 s lalt)
-  d (tap-hold-next-release 300 d lctl)
-  f (tap-hold-next-release 300 f lsft)
-  j (tap-hold-next-release 300 j rsft)
-  k (tap-hold-next-release 300 k lctl)
-  l (tap-hold-next-release 300 l lalt)
+  a (tap-hold-next-release 200 a lmet)
+  s (tap-hold-next-release 250 s lalt)
+  d (tap-hold-next-release 250 d lctl)
+  f (tap-hold-next-release 250 f lsft)
+  j (tap-hold-next-release 250 j rsft)
+  k (tap-hold-next-release 250 k lctl)
+  l (tap-hold-next-release 250 l lalt)
 
   Ca (tap-hold-next-release 300 C-a lctl)
   esc (tap-hold-next-release 300 esc lalt)

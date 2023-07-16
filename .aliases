@@ -57,7 +57,7 @@ alias yy="yup"
 alias ca="$OPENER ~/.aliases"
 alias cala="$OPENER ~/.config/alacritty/alacritty.yml"
 alias ce="$OPENER ~/.config/espanso/match/base.yml"
-alias ck="$OPENER ~/.config/kmonad/qwerty.kbd"
+alias ck="$OPENER ~/.config/kmonad/t16.kbd"
 alias clf="$OPENER ~/.config/lf/lfrc"
 alias cz="$OPENER ~/.zshrc"
 
