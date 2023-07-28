@@ -1,5 +1,5 @@
 (defcfg
-  input (device-file "/dev/input/event4")
+  input (device-file "/dev/input/event5")
   output (uinput-sink "KMonad output t16")
   fallthrough true
   allow-cmd true
@@ -73,6 +73,7 @@
 )
 
 (defsrc
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  home end  ins  del
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ]
   caps a    s    d    f    g    h    j    k    l    ;    '    \    ret
@@ -81,6 +82,7 @@
 )
 
 (deflayer qwerty
+  _    _    _    _    _    _    _    _    _    _    _    _    _    prev next pp  _
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   @tab _    _    @num _    _    _    _    _    _    _    _    _
   @cps @a   @s   @d   @f   _    _    @j   @k   @l   _    _    _    _
@@ -89,6 +91,7 @@
 )
 
 (deflayer nav
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
   @CX0 @CX1 @CX2 @CX3 @CX4 @CX5 @CX6 _    *    \(   \)   \_   +    _
   @psc @CSc @Stb spc  tab  @Atb @At2 bspc up   del  :    {    }
   _    @Ca  @esc @bsp @ret C-d  home left down rght end  "    |    _
@@ -97,6 +100,7 @@
 )
 
 (deflayer sym
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    @ae  @oe  @ue  @sz  _    _    _
@@ -105,6 +109,7 @@
 )
 
 (deflayer ctl
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    C-1  C-2  C-3  C-4  C-5  _    _    _    _    C-0  C--  C-=  _
   _    C-q  C-w  C-e  C-r  C-t  _    _    _    _    _    _    _
   XX   C-a  C-s  C-d  C-f  C-g  C-h  @ae  @oe  @ue  @sz  _    _    _
@@ -113,6 +118,7 @@
 )
 
 (deflayer num
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    @Stb XX   tab  _    +    7    8    9    =    _    _
   _    _    _    _    _    _    -    4    5    6    .    _    _    _
@@ -121,6 +127,7 @@
 )
 
 (deflayer tab
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   XX   @tbq @tbw @tbe @tbr @tbt _    _    _    _    _    _    _
   _    @tba @tbs @tbd @tbf _    _    _    _    _    _    _    _    _
@@ -129,6 +136,7 @@
 )
 
 (deflayer Lz
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
@@ -137,6 +145,7 @@
 )
 
 (deflayer Lx
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
@@ -145,6 +154,7 @@
 )
 
 (deflayer Lc
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
@@ -153,6 +163,7 @@
 )
 
 (deflayer Lv
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
@@ -161,6 +172,7 @@
 )
 
 (deflayer Lb
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
@@ -169,6 +181,7 @@
 )
 
 ;; (deflayer template
+;;   _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
 ;;   _    _    _    _    _    _    _    _    _    _    _    _    _    _
 ;;   _    _    _    _    _    _    _    _    _    _    _    _    _
 ;;   _    _    _    _    _    _    _    _    _    _    _    _    _    _
