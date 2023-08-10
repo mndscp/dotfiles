@@ -1,5 +1,5 @@
 (defcfg
-  input (device-file "/dev/input/event5")
+  input (device-file "/dev/input/event6")
   output (uinput-sink "KMonad output t16")
   fallthrough true
   allow-cmd true
@@ -12,7 +12,7 @@
   Cac #(C-a C-c)
   Cav #(C-a C-v)
 
-  Xz (tap-hold-next 35 z (layer-toggle Lz) :timeout-button z)
+  Xz (tap-hold-next 35 z (layer-toggle Lz))
   Xx (tap-hold-next 35 x (layer-toggle Lx) :timeout-button x)
   Xc (tap-hold-next 35 c (layer-toggle Lc) :timeout-button c)
   Xv (tap-hold-next 35 v (layer-toggle Lv) :timeout-button v)
@@ -138,10 +138,10 @@
 (deflayer Lz
   _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    up   _    _    _    _    _    _    _    _    _
+  _    _    left down rght _    _    _    _    _    _    _    _    _
   _    _    _    _    C-a  @Cac _    _    _    _    _    _    _
-  _    _    _              _              _    _    _    _
+  _    _    _              lctl           _    _    _    _
 )
 
 (deflayer Lx
