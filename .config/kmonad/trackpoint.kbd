@@ -1,5 +1,5 @@
 (defcfg
-  input (device-file "/dev/input/event8")
+  input (device-file "/dev/input/event12")
   output (uinput-sink "KMonad output trackpoint")
   fallthrough true
   allow-cmd true
@@ -12,7 +12,7 @@
   Cac #(C-a C-c)
   Cav #(C-a C-v)
 
-  Xz (tap-hold-next 35 z (layer-toggle Lz))
+  Xz (tap-hold-next 35 z (layer-toggle Lz) :timeout-button z)
   Xx (tap-hold-next 35 x (layer-toggle Lx) :timeout-button x)
   Xc (tap-hold-next 35 c (layer-toggle Lc) :timeout-button c)
   Xv (tap-hold-next 35 v (layer-toggle Lv) :timeout-button v)

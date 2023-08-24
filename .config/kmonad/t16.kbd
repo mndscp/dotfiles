@@ -1,5 +1,5 @@
 (defcfg
-  input (device-file "/dev/input/event6")
+  input (device-file "/dev/input/event7")
   output (uinput-sink "KMonad output t16")
   fallthrough true
   allow-cmd true
@@ -12,7 +12,7 @@
   Cac #(C-a C-c)
   Cav #(C-a C-v)
 
-  Xz (tap-hold-next 35 z (layer-toggle Lz))
+  Xz (tap-hold-next 35 z (layer-toggle Lz) :timeout-button z)
   Xx (tap-hold-next 35 x (layer-toggle Lx) :timeout-button x)
   Xc (tap-hold-next 35 c (layer-toggle Lc) :timeout-button c)
   Xv (tap-hold-next 35 v (layer-toggle Lv) :timeout-button v)
@@ -65,6 +65,7 @@
   f12 (tap-hold-next-release 200 f12 lsft)
   psc (tap-hold-next-release 200 prnt lsft)
 
+  ZZ (tap-hold-next-release 300 tab (layer-toggle Lz))
   tab (tap-hold-next-release 300 tab (layer-toggle tab))
   sym (tap-hold-next-release 300 ralt (layer-toggle sym))
   num (tap-hold-next-release 300 e (layer-toggle num))
@@ -87,7 +88,7 @@
   @tab _    _    @num _    _    _    _    _    _    _    _    _
   @cps @a   @s   @d   @f   _    _    @j   @k   @l   _    _    _    _
   _    _    @Xz  @Xx  @Xc  @Xv  @Xb  _    _    _    _    _    _
-  _    _    _              @spc           @han _    _    _
+  _    _    @ZZ            @spc           @han _    _    _
 )
 
 (deflayer nav
