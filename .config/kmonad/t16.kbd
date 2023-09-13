@@ -1,5 +1,5 @@
 (defcfg
-  input (device-file "/dev/input/event7")
+  input (device-file "/dev/input/event5")
   output (uinput-sink "KMonad output t16")
   fallthrough true
   allow-cmd true
@@ -47,6 +47,10 @@
   tbz M-C-A-z
   tbx M-C-A-x
   tbc M-C-A-c
+  tbn M-C-A-n
+  tbm M-C-A-m
+  tb, M-C-A-,
+  tb. M-C-A-.
 
   han KeyHangeul
 
@@ -132,7 +136,7 @@
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   XX   @tbq @tbw @tbe @tbr @tbt _    _    _    _    _    _    _
   _    @tba @tbs @tbd @tbf _    _    _    _    _    _    _    _    _
-  _    _    @tbz @tbx @tbc _    _    _    _    _    _    _    _
+  _    _    @tbz @tbx @tbc _    _    @tbn @tbm @tb, @tb. _    _
   _    _    @CSn           @f12           _    _    _    _
 )
 

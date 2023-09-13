@@ -65,6 +65,7 @@
   f12 (tap-hold-next-release 200 f12 lsft)
   psc (tap-hold-next-release 200 prnt lsft)
 
+  ZZ (tap-hold-next-release 300 tab (layer-toggle Lz))
   tab (tap-hold-next-release 300 tab (layer-toggle tab))
   sym (tap-hold-next-release 300 ralt (layer-toggle sym))
   num (tap-hold-next-release 300 e (layer-toggle num))
@@ -85,7 +86,7 @@
   @tab _    _    @num _    _    _    _    _    _    _    _    _
   @cps @a   @s   @d   @f   _    _    @j   @k   @l   _    _    _    _
   _    _    @Xz  @Xx  @Xc  @Xv  @Xb  _    _    _    _    _    _
-  _    _    _              @spc           @han _    _    _
+  _    _    @ZZ            @spc           @han _    _    _
 )
 
 (deflayer nav
