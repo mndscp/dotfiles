@@ -1,5 +1,5 @@
 (defcfg
-  input (device-file "/dev/input/event5")
+  input (device-file "/dev/input/event6")
   output (uinput-sink "KMonad output t16")
   fallthrough true
   allow-cmd true
@@ -143,8 +143,8 @@
 (deflayer Lz
   _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    up   _    _    _    _    _    _    _    _    _
-  _    _    left down rght _    _    _    _    _    _    _    _    _
+  _    _    _    up   ret  _    _    _    _    _    _    _    _
+  _    _    left down rght ret  _    _    _    _    _    _    _    _
   _    _    _    _    C-a  @Cac _    _    _    _    _    _    _
   _    _    _              lctl           _    _    _    _
 )
