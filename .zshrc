@@ -14,7 +14,8 @@ export NVM_DIR=$XDG_DATA_HOME/nvm
 # General settings
 export EDITOR="nvim"
 export EXA_ICON_SPACING="2"
-# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANROFFOPT='-c'
 export OPENER="codium"
 export PAGER="bat"
 export PATH=$PATH:~/.local/bin
