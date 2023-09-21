@@ -100,7 +100,7 @@ setopt HIST_IGNORE_SPACE
 setopt HIST_VERIFY
 setopt INC_APPEND_HISTORY
 
-# Show time for all commands that took longer than 10 seconds to complete
+# Show time for all commands that took longer than 5 seconds to complete
 REPORTTIME=5
 
 # Make last directory available through popd, useful after changing directory with lfcd
@@ -186,3 +186,10 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
 # switch group using `,` and `.`
 zstyle ':fzf-tab:*' switch-group ',' '.'
+
+# bun completions
+[ -s "/home/z/.bun/_bun" ] && source "/home/z/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
