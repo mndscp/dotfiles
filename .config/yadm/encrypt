@@ -23,6 +23,7 @@
 .config/git/*
 .config/khotkeysrc
 .config/kmahjonggrc
+.config/kwinrc
 .config/kwinrulesrc
 .config/lf/*
 .config/Mailspring/config.json
