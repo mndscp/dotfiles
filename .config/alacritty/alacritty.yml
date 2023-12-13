@@ -36,7 +36,7 @@ font:
 
 colors:
   primary:
-    background: '#1c1c1c'
+    background: '#181818'
     foreground: '#c6c6c6'
 
   normal:
