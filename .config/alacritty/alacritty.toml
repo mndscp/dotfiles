@@ -64,7 +64,7 @@ y = 10
 x = 1280
 y = 0
 
-[keyboard]
-bindings = [
-  { key = "V", mods = "Control", action = "Paste" }
-]
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control"
