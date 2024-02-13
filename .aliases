@@ -21,6 +21,7 @@ alias ff="clear && fastfetch --load-config paleofetch --color-title 37 --color-k
 alias fff="clear && fastfetch --color-title 37 --color-keys 33 && echo"
 alias fj="firejail"
 alias fjn="firejail --net=none"
+alias fl="figlet -f /usr/share/figlet/fonts/2row.flf"
 alias fw=" lfcd ~/Code/work"
 alias gh="cd ~"
 alias gt="gotop"
