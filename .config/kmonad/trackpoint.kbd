@@ -1,5 +1,5 @@
 (defcfg
-  input (device-file "/dev/input/event15")
+  input (device-file "/dev/input/event17")
   output (uinput-sink "KMonad output trackpoint")
   fallthrough true
   allow-cmd true
@@ -34,6 +34,7 @@
   CX4 C-A-M-4
   CX5 C-A-M-5
   CX6 C-A-M-6
+  CXY C-A-M-Y
 
   tbq M-C-A-q
   tbw M-C-A-w
@@ -98,7 +99,7 @@
 (deflayer nav
   _    _    _    _    _    _    _    _    _    _    _    _    _
   @CX0 @CX1 @CX2 @CX3 @CX4 @CX5 @CX6 _    *    \(   \)   \_   +    _    _    _    _
-  @psc @CSc @Stb spc  tab  @Atb @At2 bspc up   del  :    {    }
+  @psc @CSc @Stb spc  tab  @Atb _    bspc up   del  :    {    }
   _    @Ca  @esc @bsp @ret C-d  home left down rght end  "    |    _
   _    _    C-s  C-y  C-z  del  @CSd _    C-c  C-v  C-x  ?    _
   _    _    _              XX             _    _    _    _
@@ -134,7 +135,7 @@
 (deflayer tab
   _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  XX   @tbq @tbw @tbe @tbr @tbt _    _    _    _    _    _    _
+  XX   @tbq @tbw @tbe @tbr @tbt @CXY _    _    _    _    _    _
   _    @tba @tbs @tbd @tbf _    _    _    _    _    _    _    _    _
   _    _    @tbz @tbx @tbc _    _    @tbn @tbm @tb, @tb. _    _
   _    _    @CSn           @f12           _    _    _    _
