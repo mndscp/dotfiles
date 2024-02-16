@@ -64,7 +64,7 @@ y = 10
 x = 1280
 y = 0
 
-[[keyboard.bindings]]
-action = "Paste"
-key = "V"
-mods = "Control"
+# [[keyboard.bindings]]
+# action = "Paste"
+# key = "V"
+# mods = "Control"
