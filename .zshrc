@@ -187,9 +187,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
 # switch group using `,` and `.`
 zstyle ':fzf-tab:*' switch-group ',' '.'
 
-# bun completions
-[ -s "/home/z/.bun/_bun" ] && source "/home/z/.bun/_bun"
+# direnv
+eval "$(direnv hook zsh)"
 
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+if [ -e /home/z/.nix-profile/etc/profile.d/nix.sh ]; then . /home/z/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
