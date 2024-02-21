@@ -1,9 +1,9 @@
-- 1.1.10
+- 1.1.11
 - _NAME: LIFT VERTICAL ERGONOMIC MOUSE
   _absent: [hi-res-scroll, hires-smooth-invert, hires-smooth-resolution, hires-scroll-mode, scroll-ratchet, smart-shift, thumb-scroll-invert, thumb-scroll-mode,
-    onboard_profiles, report_rate, pointer_speed, speed-change, backlight, backlight-timed, fn-swap, persistent-remappable-keys, disable-keyboard-keys,
-    crown-smooth, divert-crown, divert-gkeys, m-key-leds, mr-key-led, multiplatform, gesture2-gestures, gesture2-divert, gesture2-params, sidetone, equalizer,
-    adc_power_management]
+    onboard_profiles, report_rate, report_rate_extended, pointer_speed, speed-change, backlight, backlight_level, backlight_duration_hands_out, backlight_duration_hands_in,
+    backlight_duration_powered, backlight-timed, led_control, led_zone_, fn-swap, persistent-remappable-keys, disable-keyboard-keys, crown-smooth, divert-crown,
+    divert-gkeys, m-key-leds, mr-key-led, multiplatform, gesture2-gestures, gesture2-divert, gesture2-params, sidetone, equalizer, adc_power_management]
   _battery: 4100
   _modelId: B03100000000
   _sensitive: {divert-keys: false, reprogrammable-keys: false}
@@ -11,10 +11,10 @@
   _unitId: 0BAD5C0F
   _wpid: B031
   change-host: null
-  divert-keys: {82: 0, 83: 1, 86: 1, 253: 1}
-  dpi: 1000
+  divert-keys: {0x52: 0x0, 0x53: 0x1, 0x56: 0x1, 0xfd: 0x1}
+  dpi: 0x3e8
   lowres-scroll-mode: false
-  reprogrammable-keys: {82: 82, 83: 83, 86: 86, 253: 253}
+  reprogrammable-keys: {0x52: 0x52, 0x53: 0x53, 0x56: 0x56, 0xfd: 0xfd}
 - _NAME: MX Keys Mini
   _modelId: B36900000000
   _sensitive: {backlight: false, multiplatform: false}
@@ -23,7 +23,7 @@
   _wpid: B369
   backlight: false
   change-host: null
-  disable-keyboard-keys: {1: false, 8: false, 16: false}
-  divert-keys: {226: 0, 227: 0, 229: 0, 231: 0, 232: 0, 233: 0, 259: 0, 264: 0, 266: 0, 279: 0, 284: 0}
+  disable-keyboard-keys: {0x1: false, 0x8: false, 0x10: false}
+  divert-keys: {0xe2: 0x0, 0xe3: 0x0, 0xe5: 0x0, 0xe7: 0x0, 0xe8: 0x0, 0xe9: 0x0, 0x103: 0x0, 0x108: 0x0, 0x10a: 0x0, 0x117: 0x0, 0x11c: 0x0}
   fn-swap: true
-  multiplatform: 0
+  multiplatform: 0x0
