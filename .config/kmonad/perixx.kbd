@@ -43,6 +43,7 @@
   tbr M-C-A-r
   tbt M-C-A-t
   tby M-C-A-y
+  tbp M-C-A-p
   tba M-C-A-a
   tbs M-C-A-s
   tbd M-C-A-d
@@ -141,7 +142,7 @@
 (deflayer tab
   _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  XX   @tbq @tbw @tbe @tbr @tbt @tby _    _    _    _    _    _
+  XX   @tbq @tbw @tbe @tbr @tbt @tby _    _    _    @tbp _    _
   _    @tba @tbs @tbd @tbf _    _    _    _    _    _    _    _    _
   _    _    @tbz @tbx @tbc _    _    @tbn @tbm @tb, @tb. _    _
   _    _    @CSn           @f12           _    _    _    _

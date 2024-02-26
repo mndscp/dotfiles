@@ -188,6 +188,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
 zstyle ':fzf-tab:*' switch-group ',' '.'
 
 # direnv
-eval "$(direnv hook zsh)"
+[ -f /usr/bin/direnv ] && eval "$(direnv hook zsh)"
+export DIRENV_LOG_FORMAT=
 
 if [ -e /home/z/.nix-profile/etc/profile.d/nix.sh ]; then . /home/z/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
