@@ -29,7 +29,9 @@
 .config/Mailspring/config.json
 .config/Mailspring/keymap.json
 .config/Mailspring/Preferences
-.config/mpv/script-opts/osc.conf
+.config/mpv/fonts/*
+.config/mpv/script/**/*
+.config/mpv/script-opts/*
 .config/mpv/input.conf
 .config/mpv/mpv.conf
 .config/nomacs/Image Lounge.conf
@@ -42,4 +44,3 @@
 .config/puddletag/user_shortcuts
 .config/soundconverterrc
 .config/transmission-remote-gtk/config.json
-.config/whatscli/whatscli.config
