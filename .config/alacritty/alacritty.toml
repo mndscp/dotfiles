@@ -25,7 +25,7 @@ background = "#181818"
 foreground = "#c6c6c6"
 
 [font]
-size = 13
+size = 15.5
 
 [font.bold]
 family = "JetBrainsMonoNL NF"
