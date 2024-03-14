@@ -1,5 +1,5 @@
 (defcfg
-  input (device-file "/dev/input/event10")
+  input (device-file "/dev/input/event9")
   output (uinput-sink "KMonad output trackpoint")
   fallthrough true
   allow-cmd true
