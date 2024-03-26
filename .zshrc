@@ -19,8 +19,6 @@ export MANROFFOPT='-c'
 export OPENER="codium"
 export PAGER="bat"
 export PATH=$PATH:~/.local/bin
-export LC_ALL="en_US.UTF-8"
-export LC_CTYPE="en_US.UTF-8"
 
 # Needed for yadm file encryption
 export GPG_TTY=$(tty)
