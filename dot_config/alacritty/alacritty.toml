@@ -1,0 +1,65 @@
+live_config_reload = true
+
+[colors.bright]
+black = "#444444"
+blue = "#82AAFF"
+cyan = "#89DDFF"
+green = "#C3E88D"
+magenta = "#C792EA"
+red = "#F07178"
+white = "#FFFFFF"
+yellow = "#FFCB6B"
+
+[colors.normal]
+black = "#666666"
+blue = "#82AAFF"
+cyan = "#89DDFF"
+green = "#C3E88D"
+magenta = "#C792EA"
+red = "#F07178"
+white = "#FFFFFF"
+yellow = "#FFCB6B"
+
+[colors.primary]
+background = "#181818"
+foreground = "#c6c6c6"
+
+[font]
+size = 15.5
+
+[font.bold]
+family = "JetBrainsMonoNL NF"
+
+[font.italic]
+family = "JetBrainsMonoNL NF"
+
+[font.normal]
+family = "JetBrainsMonoNL NF"
+
+[font.offset]
+y = -1
+
+[scrolling]
+history = 10000
+multiplier = 4
+
+[shell]
+program = "/usr/bin/tmux"
+
+[window]
+decorations = "none"
+dynamic_padding = true
+dynamic_title = true
+startup_mode = "Maximized"
+
+[window.dimensions]
+columns = 139
+lines = 74
+
+[window.padding]
+x = 15
+y = 10
+
+[window.position]
+x = 1280
+y = 0
