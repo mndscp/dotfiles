@@ -16,15 +16,3 @@
   dpi: 1000
   lowres-scroll-mode: false
   reprogrammable-keys: {82: 82, 83: 83, 86: 86, 253: 253}
-- _NAME: MX Keys Mini
-  _modelId: B36900000000
-  _sensitive: {backlight: false, multiplatform: false}
-  _serial: 0B8BA64E
-  _unitId: 0B8BA64E
-  _wpid: B369
-  backlight: false
-  change-host: null
-  disable-keyboard-keys: {1: false, 8: false, 16: false}
-  divert-keys: {226: 0, 227: 0, 229: 0, 231: 0, 232: 0, 233: 0, 259: 0, 264: 0, 266: 0, 279: 0, 284: 0}
-  fn-swap: true
-  multiplatform: 0
