@@ -126,7 +126,7 @@ echo "$PACKAGE_LIST" | while IFS= read -r package_name; do
         sudo pacman -S --noconfirm "chaotic-aur/$package_name"
       else
         echo "Installing $package_name ..."
-        sudo pacman -S --noconfirm "$package_name"
+        sudo yay -S --noconfirm "$package_name"
       fi
     fi
   fi
