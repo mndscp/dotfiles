@@ -8,9 +8,6 @@ sudo pacman-key --lsign-key 3056513887B78AEB
 sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'
 sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 
-# Update the package database
-sudo pacman -Sy
-
 # Add the chaotic-aur repository to /etc/pacman.conf if not already added
 if [ -f /etc/pacman.d/chaotic-mirrorlist ] && ! grep -q "\[chaotic-aur\]" /etc/pacman.conf; then
   sudo sh -c 'echo "
@@ -21,6 +18,9 @@ Include = /etc/pacman.d/chaotic-mirrorlist
 else
   echo "chaotic-aur repository already exists in /etc/pacman.conf."
 fi
+
+# Update the package database
+sudo pacman -Sy
 
 # Function to check if a package is installed
 is_installed() {
