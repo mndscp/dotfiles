@@ -118,7 +118,7 @@ echo "$PACKAGE_LIST" | while IFS= read -r package_name; do
   # Skip empty lines
   if [ -n "$package_name" ]; then
     if is_installed "$package_name"; then
-      echo "$package_name is already installed."
+      echo "$package_name ✔"
     else
 
       if is_in_chaotic_aur "$package_name"; then
