@@ -1,11 +1,5 @@
 #!/bin/sh
 
-# Add the chaotic-aur repository to /etc/pacman.conf
-sudo sh -c 'echo "
-[chaotic-aur]
-Include = /etc/pacman.d/chaotic-mirrorlist
-" >> /etc/pacman.conf'
-
 # Import the chaotic-aur signing key
 sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
 sudo pacman-key --lsign-key 3056513887B78AEB
@@ -16,6 +10,17 @@ sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg
 
 # Update the package database
 sudo pacman -Sy
+
+# Add the chaotic-aur repository to /etc/pacman.conf if not already added
+if [ -f /etc/pacman.d/chaotic-mirrorlist ] && ! grep -q "\[chaotic-aur\]" /etc/pacman.conf; then
+  sudo sh -c 'echo "
+[chaotic-aur]
+Include = /etc/pacman.d/chaotic-mirrorlist
+" >> /etc/pacman.conf'
+  echo "chaotic-aur repository added to /etc/pacman.conf."
+else
+  echo "chaotic-aur repository already exists in /etc/pacman.conf."
+fi
 
 # Function to check if a package is installed
 is_installed() {
