@@ -26,12 +26,12 @@ sudo pacman -Sy
 
 # Function to check if a package is installed
 is_installed() {
-  pacman -Q "$1" > /dev/null 2>&1
+  yay -Q "$1" > /dev/null 2>&1
 }
 
 # Function to check if a package is available in chaotic-aur
 is_in_chaotic_aur() {
-  pacman -Sl chaotic-aur | grep -q "$1 "
+  yay -Sl chaotic-aur | grep -q "$1 "
 }
 
 # List of packages to check and install if necessary
@@ -67,7 +67,7 @@ mpv-full
 mpv-thumbfast-git
 mpv-uosc
 neovim
-nomacs-git
+nomacs
 nvm
 obsidian-bin
 okular
@@ -123,7 +123,7 @@ echo "$PACKAGE_LIST" | while IFS= read -r package_name; do
 
       if is_in_chaotic_aur "$package_name"; then
         echo "Installing chaotic-aur/$package_name ..."
-        sudo pacman -S --noconfirm "chaotic-aur/$package_name"
+        yay -S --noconfirm "chaotic-aur/$package_name"
       else
         echo "Installing $package_name ..."
         yay -S --noconfirm "$package_name"
