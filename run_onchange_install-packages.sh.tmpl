@@ -31,7 +31,7 @@ is_installed() {
 
 # Function to check if a package is available in chaotic-aur
 is_in_chaotic_aur() {
-  pacman -Sl chaotic-aur | grep -q "$1"
+  pacman -Sl chaotic-aur | grep -q "$1 "
 }
 
 # List of packages to check and install if necessary
