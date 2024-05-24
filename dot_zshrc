@@ -16,7 +16,7 @@ export EDITOR="nvim"
 export EXA_ICON_SPACING="2"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT='-c'
-export OPENER="codium"
+export OPENER="codium --wait"
 export PAGER="bat"
 export PATH=$PATH:~/.zzz/bin
 
