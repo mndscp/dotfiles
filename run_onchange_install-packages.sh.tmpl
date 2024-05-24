@@ -123,10 +123,10 @@ echo "$PACKAGE_LIST" | while IFS= read -r package_name; do
       echo "Installing $package_name ..."
 
       if is_in_chaotic_aur "$package_name"; then
-        echo "$1 is in the chaotic-aur"
+        echo "$package_name is in the chaotic-aur"
         # sudo pacman -S --noconfirm "chaotic-aur/$package_name"
       else
-        echo "$1 is in the aur"
+        echo "$package_name is in the aur"
         # sudo pacman -S --noconfirm "$package_name"
       fi
     fi
