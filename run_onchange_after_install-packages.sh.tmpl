@@ -7,7 +7,7 @@ is_installed() {
 
 # Function to check if a package is available in chaotic-aur
 is_in_chaotic_aur() {
-  yay -Sl chaotic-aur | grep -q " $1 "
+  echo "$chaotic_aur_list" | grep -q " $1 "
 }
 
 # Check if we can modify the pacman keyring
@@ -39,6 +39,9 @@ fi
 
 # Update the package database
 sudo pacman -Sy
+
+# Save the list of chaotic-aur packages in a variable
+chaotic_aur_list=$(yay -Sl chaotic-aur)
 
 # List of packages to check and install if necessary
 PACKAGE_LIST="
@@ -128,10 +131,10 @@ echo "$PACKAGE_LIST" | while IFS= read -r package_name; do
     else
       if is_in_chaotic_aur "$package_name"; then
         echo "Installing $package_name from chaotic-aur ..."
-        sudo pacman -S --noconfirm "chaotic-aur/$package_name"
+        yay -S --noconfirm "chaotic-aur/$package_name"
       else
         echo "Installing $package_name ..."
-        sudo pacman -S --noconfirm "$package_name"
+        yay -S --noconfirm "$package_name"
       fi
     fi
   fi
@@ -152,8 +155,4 @@ chezmoi_git_settings='
 if ! grep -q '\[git\]' "$chezmoi_config"; then
   # If the settings do not exist, append them to the configuration file
   printf "%s\n" "$chezmoi_git_settings" >> "$chezmoi_config"
-
-  echo "Git settings added to $chezmoi_config."
-else
-  echo "Git settings already exist in $chezmoi_config."
 fi
