@@ -7,7 +7,7 @@ is_installed() {
 
 # Function to check if a package is available in chaotic-aur
 is_in_chaotic_aur() {
-  echo "$chaotic_aur_list" | grep -q " $1 "
+  yay -Sl chaotic-aur | grep -q " $1 "
 }
 
 # Check if we can modify the pacman keyring
@@ -39,9 +39,6 @@ fi
 
 # Update the package database
 sudo pacman -Sy
-
-# Save the list of chaotic-aur packages in a variable
-chaotic_aur_list=$(yay -Sl chaotic-aur)
 
 # List of packages to check and install if necessary
 PACKAGE_LIST="
