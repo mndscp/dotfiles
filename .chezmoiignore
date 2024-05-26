@@ -1,5 +1,9 @@
 key.txt.age
 
+{{- if eq .chezmoi.hostname "ndvr" }}
+.npmrc
+{{- end }}
+
 {{- if ne .chezmoi.hostname "ndvr" }}
 .config/autostart/autostart-dolphin.desktop
 .config/autostart/autostart-librewolf.desktop
