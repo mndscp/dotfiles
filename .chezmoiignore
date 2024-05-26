@@ -1,7 +1,7 @@
 key.txt.age
 
-{{- if eq .chezmoi.hostname "ndvr" }}
 .npmrc
+{{- if eq .chezmoi.hostname "ndvr" }}
 {{- end }}
 
 {{- if ne .chezmoi.hostname "ndvr" }}
