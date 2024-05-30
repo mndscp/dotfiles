@@ -6,20 +6,26 @@ key.txt.age
 .config/autostart/deadbeef.desktop
 .config/autostart/mullvad-vpn.desktop
 .config/autostart/syncthing.desktop
+.config/flacon
 .config/flacon/flacon.conf
+.config/fsearch
 .config/fsearch/fsearch.conf
+.config/puddletag
 .config/puddletag/combos
 .config/puddletag/function_settings
 .config/puddletag/gensettings
 .config/puddletag/puddletag.conf
 .config/puddletag/tagpanel
 .config/puddletag/user_shortcuts
+.config/transmission-remote-gtk
 .config/transmission-remote-gtk/config.json
 .local/share/kio/servicemenus/add-to-favorites.desktop
 .local/share/kio/servicemenus/apply-rsgain.desktop
 .local/share/kio/servicemenus/puddletag.desktop
 .local/share/kio/servicemenus/remove-replaygain.desktop
 .local/share/kio/servicemenus/spectral.desktop
+.local/share/puddletag
+.local/share/puddletag/actions
 .local/share/puddletag/actions/Album type Compilation.action
 .local/share/puddletag/actions/Album type EP.action
 .local/share/puddletag/actions/Album type Single.action
@@ -40,11 +46,13 @@ key.txt.age
 .zzz/bin/remove-replaygain
 .zzz/bin/spectral
 .zzz/bin/wrk
+.zzz/utils/music
 .zzz/utils/music/fix-mp3-errors
 .zzz/utils/music/remove-id3v1-tags
 .zzz/utils/music/remove-mp3-bak-files
 .zzz/utils/music/scan-mp3-errors
 .zzz/utils/music/update-folder-modtime
+.zzz/utils/programs
 .zzz/utils/programs/davinciresolve.sudo.sh
 .zzz/utils/programs/fsearch.sh
 .zzz/utils/programs/sox.sh
