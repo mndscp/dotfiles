@@ -17,7 +17,6 @@ key.txt.age
 .config/puddletag/puddletag.conf
 .config/puddletag/tagpanel
 .config/puddletag/user_shortcuts
-.config/transmission-remote-gtk
 .config/transmission-remote-gtk/config.json
 .local/share/kio/servicemenus/add-to-favorites.desktop
 .local/share/kio/servicemenus/apply-rsgain.desktop
