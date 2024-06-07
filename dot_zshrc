@@ -25,6 +25,7 @@ export GPG_TTY=$(tty)
 
 bindkey -e
 bindkey -s "^f" " lfcd\n"
+bindkey -s "^y" " yy\n"
 
 # Source file if it exists
 source_file() {
@@ -170,6 +171,18 @@ lfcd() {
     /bin/rm -f "$tmp"
     [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
   fi
+}
+
+# Stay in last yazi directory on exit
+function yy() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+
+	/usr/bin/rm -f -- "$tmp"
 }
 
 # nvm
