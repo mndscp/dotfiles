@@ -11,6 +11,7 @@ baloosearchEnabled=false
 bookmarksEnabled=false
 desktopsessionsEnabled=false
 helprunnerEnabled=false
+krunner_appstreamEnabled=false
 krunner_recentdocumentsEnabled=false
 kwinEnabled=false
 locationsEnabled=false
