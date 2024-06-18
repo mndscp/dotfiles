@@ -21,7 +21,7 @@ export PAGER="bat"
 export PATH=$PATH:~/.zzz/bin
 
 bindkey -e
-bindkey -s "^f" " lf\n"
+bindkey -s "^f" "lf\n"
 
 # Source file if it exists
 source_file() {
