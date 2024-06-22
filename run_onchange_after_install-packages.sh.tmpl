@@ -33,6 +33,14 @@ if sudo pacman-key --init > /dev/null 2>&1; then
   if [ -f /etc/pacman.d/chaotic-mirrorlist ] && ! grep -q "\[chaotic-aur\]" /etc/pacman.conf; then
     sudo sh -c 'printf "\n[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist\n" >> /etc/pacman.conf'
   fi
+
+  # Check if yay is installed and install it if not
+  if ! pacman -Qi yay > /dev/null 2>&1; then
+    echo "yay is not installed. Installing yay from chaotic-aur."
+    sudo pacman -Syu --noconfirm chaotic-aur/yay
+  else
+    echo "yay is already installed."
+  fi
 else
   echo "Insufficient permissions to modify pacman keyring. Skipping chaotic-aur setup."
 fi

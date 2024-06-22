@@ -13,6 +13,7 @@ desktopsessionsEnabled=false
 helprunnerEnabled=false
 krunner_appstreamEnabled=false
 krunner_recentdocumentsEnabled=false
+krunner_webshortcutsEnabled=false
 kwinEnabled=false
 locationsEnabled=false
 org.kde.activities2Enabled=false
