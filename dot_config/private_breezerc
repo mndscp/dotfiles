@@ -1,6 +1,0 @@
-[Common]
-ShadowSize=ShadowNone
-ShadowStrength=128
-
-[Style]
-WindowDragMode=WD_NONE
