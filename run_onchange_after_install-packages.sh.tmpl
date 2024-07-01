@@ -111,7 +111,7 @@ zoxide
 zsh
 zsh-theme-powerlevel10k
 
-{{ if eq .chezmoi.hostname "ndvr" }}
+{{ if eq .chezmoi.hostname "z-desktop" }}
 discord
 flacon
 fsearch-git
@@ -128,6 +128,11 @@ thunderbird-bin
 transmission-remote-gtk
 yt-dlp
 zapzap
+{{ end }}
+
+{{ if eq .chezmoi.hostname "z-laptop-work" }}
+slack-desktop
+ungoogled-chromium
 {{ end }}
 "
 
