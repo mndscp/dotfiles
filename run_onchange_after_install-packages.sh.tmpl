@@ -55,14 +55,14 @@ chaotic_aur_list=$(yay -Sl chaotic-aur)
 PACKAGE_LIST="
 alacritty
 bat
-composer
+btop
 ctpv
 dash
 dashbinsh
 deadbeef
 deadbeef-mpris2-plugin
 emote
-espanso-bin
+espanso-x11-bin
 eza
 fastfetch
 fd
@@ -71,10 +71,8 @@ ffmpegthumbs
 figlet
 flameshot
 fzf
-fzf-tab-bin-git
+fzf-tab-git
 gnome-disk-utility
-gotop-bin
-gufw
 ibus-hangul
 kdeconnect
 keyd
@@ -86,7 +84,6 @@ mpv-thumbfast-git
 mpv-uosc
 neovim
 nomacs
-nvm
 okular
 peek
 plasma6-applets-plasmusic-toolbar
@@ -100,12 +97,13 @@ tealdeer
 tmux
 trashy
 ttf-jetbrains-mono-nerd
+ufw
 unrar
 unzip
 ventoy-bin
-vscodium-bin
-vscodium-bin-features
-vscodium-bin-marketplace
+vscodium
+vscodium-features
+vscodium-marketplace
 wmctrl
 xclip
 zoxide
@@ -117,7 +115,7 @@ discord
 flacon
 fsearch-git
 librewolf
-mullvad-vpn-bin
+mullvad-vpn
 obsidian-bin
 puddletag-git
 rsgain
@@ -125,13 +123,15 @@ signal-desktop
 soundconverter
 sox
 syncthing
-thunderbird-bin
+thunderbird
 transmission-remote-gtk
 yt-dlp
 zapzap
 {{ end }}
 
 {{ if eq .chezmoi.hostname "z-laptop-work" }}
+composer
+nvm
 slack-desktop
 ungoogled-chromium
 {{ end }}
