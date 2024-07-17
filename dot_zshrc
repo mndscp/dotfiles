@@ -169,9 +169,6 @@ lfcd() {
   fi
 }
 
-# nvm
-source /usr/share/nvm/init-nvm.sh
-
 # fzf-tab
 # disable sort when completing `git checkout`
 zstyle ':completion:*:git-checkout:*' sort false
@@ -183,9 +180,3 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
 # switch group using `,` and `.`
 zstyle ':fzf-tab:*' switch-group ',' '.'
-
-# direnv
-[ -f /usr/bin/direnv ] && eval "$(direnv hook zsh)"
-export DIRENV_LOG_FORMAT=
-
-if [ -e /home/z/.nix-profile/etc/profile.d/nix.sh ]; then . /home/z/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
