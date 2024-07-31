@@ -3,6 +3,7 @@
 - Or:
   - Process: discord
   - Process: slack
+  - Process: steam
 - Key: [Back Button, released]
 - KeyPress:
   - [Alt_L, Left]
@@ -13,6 +14,7 @@
     Or:
     - Process: discord
     - Process: slack
+    - Process: steam
 - Key: [Back Button, released]
 - KeyPress:
   - XF86_Back
@@ -22,6 +24,7 @@
 - Or:
   - Process: discord
   - Process: slack
+  - Process: steam
 - Key: [Forward Button, released]
 - KeyPress:
   - [Alt_L, Right]
@@ -32,6 +35,7 @@
     Or:
     - Process: discord
     - Process: slack
+    - Process: steam
 - Key: [Forward Button, released]
 - KeyPress:
   - XF86_Forward
