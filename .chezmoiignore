@@ -1,6 +1,6 @@
 key.txt.age
 
-{{- if ne .chezmoi.hostname "z-desktop-play" }}
+{{- if not (contains .chezmoi.hostname "play") }}
 .config/autostart/autostart-dolphin.desktop
 .config/autostart/autostart-librewolf.desktop
 .config/autostart/deadbeef.desktop
