@@ -103,16 +103,13 @@ ulauncher
 unrar
 unzip
 ventoy-bin
-vscodium
-vscodium-features
-vscodium-marketplace
 wmctrl
 xclip
 zoxide
 zsh
 zsh-theme-powerlevel10k
 
-{{ if eq .chezmoi.hostname "z-desktop" }}
+{{ if (.chezmoi.hostname | regexp.Match "^z-(desktop|laptop)-play$") }}
 discord
 flacon
 fsearch-git
@@ -127,15 +124,19 @@ sox
 syncthing
 thunderbird
 transmission-remote-gtk
+vscodium
+vscodium-features
+vscodium-marketplace
 yt-dlp
 zapzap
 {{ end }}
 
-{{ if eq .chezmoi.hostname "z-laptop-work" }}
+{{ if (.chezmoi.hostname | regexp.Match "^z-(desktop|laptop)-work$") }}
 composer
 nvm
 slack-desktop
 ungoogled-chromium
+visual-studio-code-bin
 {{ end }}
 "
 
