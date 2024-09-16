@@ -74,6 +74,7 @@ fzf
 fzf-tab-git
 gnome-disk-utility
 ibus-hangul
+jq
 kdeconnect
 keyd
 lf-git
@@ -109,7 +110,7 @@ zoxide
 zsh
 zsh-theme-powerlevel10k
 
-{{ if (.chezmoi.hostname | regexp.Match "^z-(desktop|laptop)-play$") }}
+{{ if eq .chezmoi.hostname "z-desktop-play") }}
 discord
 flacon
 fsearch-git
@@ -131,7 +132,37 @@ yt-dlp
 zapzap
 {{ end }}
 
-{{ if (.chezmoi.hostname | regexp.Match "^z-(desktop|laptop)-work$") }}
+{{ if eq .chezmoi.hostname "z-laptop-play") }}
+discord
+flacon
+fsearch-git
+librewolf
+mullvad-vpn
+obsidian-bin
+puddletag-git
+rsgain
+signal-desktop
+soundconverter
+sox
+syncthing
+thunderbird
+transmission-remote-gtk
+vscodium
+vscodium-features
+vscodium-marketplace
+yt-dlp
+zapzap
+{{ end }}
+
+{{ if eq .chezmoi.hostname "z-desktop-work") }}
+composer
+nvm
+slack-desktop
+ungoogled-chromium
+visual-studio-code-bin
+{{ end }}
+
+{{ if eq .chezmoi.hostname "z-laptop-work") }}
 composer
 nvm
 slack-desktop
