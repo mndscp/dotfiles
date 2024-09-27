@@ -1,26 +1,6 @@
 live_config_reload = true
 colors.transparent_background_colors = true
 
-[colors.bright]
-black = "#444444"
-blue = "#82AAFF"
-cyan = "#89DDFF"
-green = "#C3E88D"
-magenta = "#C792EA"
-red = "#F07178"
-white = "#FFFFFF"
-yellow = "#FFCB6B"
-
-[colors.normal]
-black = "#666666"
-blue = "#82AAFF"
-cyan = "#89DDFF"
-green = "#C3E88D"
-magenta = "#C792EA"
-red = "#F07178"
-white = "#FFFFFF"
-yellow = "#FFCB6B"
-
 [colors.primary]
 background = "#181818"
 foreground = "#c6c6c6"
@@ -55,3 +35,48 @@ y = 15
 [window.position]
 x = 1280
 y = 0
+
+# Field Lights Colors
+
+[colors.normal]
+black =   '0x1f2430'
+red =     '0xff3333'
+green =   '0xbae67e'
+yellow =  '0xffd580'
+blue =    '0x73d0ff'
+magenta = '0xf28779'
+cyan =    '0x95e6cb'
+white =   '0xcbccc6'
+
+[colors.bright]
+black =   '0x686868'
+red =     '0xf27983'
+green =   '0xa6cc70'
+yellow =  '0xffcc66'
+blue =    '0x5ccfe6'
+magenta = '0xffee99'
+cyan =    '0x95e6cb'
+white =   '0xffffff'
+
+# Material Colors
+
+# [colors.bright]
+# black = "#444444"
+# blue = "#82AAFF"
+# cyan = "#89DDFF"
+# green = "#C3E88D"
+# magenta = "#C792EA"
+# red = "#F07178"
+# white = "#FFFFFF"
+# yellow = "#FFCB6B"
+
+# [colors.normal]
+# black = "#666666"
+# blue = "#82AAFF"
+# cyan = "#89DDFF"
+# green = "#C3E88D"
+# magenta = "#C792EA"
+# red = "#F07178"
+# white = "#FFFFFF"
+# yellow = "#FFCB6B"
+
