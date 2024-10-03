@@ -43,5 +43,5 @@
 ...
 ---
 - Key: [DPI Switch, pressed]
-- Execute: [audacious, -t]
+- Execute: [deadbeef, --play-pause]
 ...
