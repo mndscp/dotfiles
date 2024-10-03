@@ -17,7 +17,7 @@
     - Process: steam
 - Key: [Back Button, released]
 - KeyPress:
-  - XF86_Back
+  - [Alt_L, Left]
   - click
 ...
 ---
@@ -38,10 +38,10 @@
     - Process: steam
 - Key: [Forward Button, released]
 - KeyPress:
-  - XF86_Forward
+  - [Alt_L, Right]
   - click
 ...
 ---
 - Key: [DPI Switch, pressed]
-- Execute: [deadbeef, --play-pause]
+- Execute: [audacious, -t]
 ...
