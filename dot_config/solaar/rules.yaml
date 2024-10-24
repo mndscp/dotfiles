@@ -17,7 +17,7 @@
     - Process: steam
 - Key: [Back Button, released]
 - KeyPress:
-  - [Alt_L, Left]
+  - XF86_Back
   - click
 ...
 ---
@@ -38,7 +38,7 @@
     - Process: steam
 - Key: [Forward Button, released]
 - KeyPress:
-  - [Alt_L, Right]
+  - XF86_Forward
   - click
 ...
 ---
