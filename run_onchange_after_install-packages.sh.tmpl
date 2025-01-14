@@ -59,9 +59,10 @@ btop
 ctpv
 dash
 dashbinsh
-deadbeef
+deadbeef-git
 deadbeef-mpris2-plugin
 emote
+en_se
 espanso-x11-bin
 eza
 fastfetch
@@ -84,10 +85,12 @@ mpv
 mpv-thumbfast-git
 mpv-uosc
 neovim
-nomacs
+nomacs-git
 okular
+paccache-hook
 peek
 procs
+reflector-pacman-hook-git
 ripgrep
 shellcheck-bin
 solaar
@@ -98,7 +101,12 @@ tdrop
 tealdeer
 tmux
 trash-cli-git
+ttf-bitstream-vera
+ttf-dejavu
 ttf-jetbrains-mono-nerd
+ttf-liberation
+ttf-ms-win11-auto
+ttf-opensans
 ueberzugpp
 ufw
 unrar
@@ -109,17 +117,22 @@ xclip
 zoxide
 zsh
 zsh-abbr
-zsh-theme-powerlevel10k
+zsh-autosuggestions
+zsh-history-substring-search
+zsh-syntax-highlighting
+zsh-theme-powerlevel10k-git
 
 {{ if eq .chezmoi.hostname "z-desktop-play" }}
+deemix-git
 discord
 flacon
 fsearch-git
 librewolf
 mullvad-vpn
 obsidian-bin
-puddletag-git
-rsgain
+ocenaudio-bin
+puddletag
+rsgain-git
 signal-desktop
 soundconverter
 sox
@@ -133,14 +146,17 @@ zapzap
 {{ end }}
 
 {{ if eq .chezmoi.hostname "z-laptop-play" }}
+
+deemix-git
 discord
 flacon
 fsearch-git
 librewolf
 mullvad-vpn
 obsidian-bin
-puddletag-git
-rsgain
+ocenaudio-bin
+puddletag
+rsgain-git
 signal-desktop
 soundconverter
 sox
@@ -155,6 +171,7 @@ zapzap
 
 {{ if eq .chezmoi.hostname "z-desktop-work" }}
 composer
+jitsi-meet-desktop
 nvm
 slack-desktop
 ungoogled-chromium-bin
@@ -163,6 +180,7 @@ visual-studio-code-bin
 
 {{ if eq .chezmoi.hostname "z-laptop-work" }}
 composer
+jitsi-meet-desktop
 nvm
 slack-desktop
 ungoogled-chromium-bin
