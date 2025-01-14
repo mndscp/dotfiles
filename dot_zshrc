@@ -28,34 +28,14 @@ source_file() {
   [ -s "$1" ] && source "$1"
 }
 
-# Clone plugin if needed and source it
-source_zsh_plugin() {
-  ZDIR="$HOME/.zsh"
-  PLUGIN_NAME="$(echo "$1" | cut -d '/' -f 2)"
-
-  if ! [ -d "$ZDIR/$PLUGIN_NAME" ]; then
-    if [ "$PLUGIN_NAME" = "zsh-abbr" ]; then
-      git clone "https://github.com/$1.git --recurse-submodules --single-branch --branch main --depth 1 $ZDIR/$PLUGIN_NAME"
-    else
-      git clone "https://github.com/$1.git" "$ZDIR/$PLUGIN_NAME"
-    fi
-  fi
-
-
-  source_file "$ZDIR/$PLUGIN_NAME/$PLUGIN_NAME.plugin.zsh" || \
-  source_file "$ZDIR/$PLUGIN_NAME/$PLUGIN_NAME.zsh"
-}
-
 # Import aliases and load them them as session abbreviations
-# source_file ~/.zzz/aliases && source_zsh_plugin olets/zsh-abbr && abbr -S -q import-aliases
-# source_file ~/.zzz/aliases && git clone https://github.com/olets/zsh-abbr --recurse-submodules --single-branch --branch main --depth 1 .zsh/&& abbr -S -q import-aliases
 source_file ~/.zzz/aliases && source_file /usr/share/zsh/plugins/zsh-abbr/zsh-abbr.zsh && abbr -S -q import-aliases
 
-# Plugins (order is important)
-source_zsh_plugin Aloxaf/fzf-tab
-source_zsh_plugin zsh-users/zsh-autosuggestions
-source_zsh_plugin zsh-users/zsh-syntax-highlighting
-source_zsh_plugin zsh-users/zsh-history-substring-search
+# zsh Extensions (order is important)
+source_file /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.zsh
+source_file /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source_file /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source_file /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 eval "$(zoxide init zsh)"
 
