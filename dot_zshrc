@@ -34,15 +34,22 @@ source_zsh_plugin() {
   PLUGIN_NAME="$(echo "$1" | cut -d '/' -f 2)"
 
   if ! [ -d "$ZDIR/$PLUGIN_NAME" ]; then
-    git clone "https://github.com/$1.git" "$ZDIR/$PLUGIN_NAME"
+    if [ "$PLUGIN_NAME" = "zsh-abbr" ]; then
+      git clone "https://github.com/$1.git --recurse-submodules --single-branch --branch main --depth 1 $ZDIR/$PLUGIN_NAME"
+    else
+      git clone "https://github.com/$1.git" "$ZDIR/$PLUGIN_NAME"
+    fi
   fi
+
 
   source_file "$ZDIR/$PLUGIN_NAME/$PLUGIN_NAME.plugin.zsh" || \
   source_file "$ZDIR/$PLUGIN_NAME/$PLUGIN_NAME.zsh"
 }
 
 # Import aliases and load them them as session abbreviations
-source_file ~/.zzz/aliases && source_zsh_plugin olets/zsh-abbr && abbr -S -q import-aliases
+# source_file ~/.zzz/aliases && source_zsh_plugin olets/zsh-abbr && abbr -S -q import-aliases
+# source_file ~/.zzz/aliases && git clone https://github.com/olets/zsh-abbr --recurse-submodules --single-branch --branch main --depth 1 .zsh/&& abbr -S -q import-aliases
+source_file ~/.zzz/aliases && source_file /usr/share/zsh/plugins/zsh-abbr/zsh-abbr.zsh && abbr -S -q import-aliases
 
 # Plugins (order is important)
 source_zsh_plugin Aloxaf/fzf-tab
