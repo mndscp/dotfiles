@@ -1,11 +1,25 @@
 key.txt.age
 
 {{- if (eq .chezmoi.hostname "z-laptop-play") }}
+.composer
+.composer/auth.json
+.npmrc
+.ssh/id_ed25519_work
+.ssh/id_ed25519_work.pub
+.ssh/id_ed25519_work_protected
+.ssh/id_ed25519_work_protected.pub
 .zzz/bin/new
 .zzz/bin/sb
 {{- end }}
 
 {{- if (eq .chezmoi.hostname "z-desktop-play") }}
+.composer
+.composer/auth.json
+.npmrc
+.ssh/id_ed25519_work
+.ssh/id_ed25519_work.pub
+.ssh/id_ed25519_work_protected
+.ssh/id_ed25519_work_protected.pub
 .zzz/bin/new
 .zzz/bin/sb
 {{- end }}
@@ -47,6 +61,8 @@ key.txt.age
 .local/share/puddletag/actions/Tag to filename.action
 .local/share/puddletag/actions/Title case titles.action
 .local/share/puddletag/actions/action_shortcuts
+.ssh/id_ed25519_personal
+.ssh/id_ed25519_personal.pub
 .zzz/bin/add-to-favorites
 .zzz/bin/apply-replaygain
 .zzz/bin/apply-replaygain-easy
@@ -106,6 +122,8 @@ key.txt.age
 .local/share/puddletag/actions/Tag to filename.action
 .local/share/puddletag/actions/Title case titles.action
 .local/share/puddletag/actions/action_shortcuts
+.ssh/id_ed25519_personal
+.ssh/id_ed25519_personal.pub
 .zzz/bin/add-to-favorites
 .zzz/bin/apply-replaygain
 .zzz/bin/apply-replaygain-easy
