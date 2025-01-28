@@ -1,29 +1,5 @@
 key.txt.age
 
-{{- if (eq .chezmoi.hostname "z-laptop-play") }}
-.composer
-.composer/auth.json
-.npmrc
-.ssh/id_ed25519_work
-.ssh/id_ed25519_work.pub
-.ssh/id_ed25519_work_protected
-.ssh/id_ed25519_work_protected.pub
-.zzz/bin/new
-.zzz/bin/sb
-{{- end }}
-
-{{- if (eq .chezmoi.hostname "z-desktop-play") }}
-.composer
-.composer/auth.json
-.npmrc
-.ssh/id_ed25519_work
-.ssh/id_ed25519_work.pub
-.ssh/id_ed25519_work_protected
-.ssh/id_ed25519_work_protected.pub
-.zzz/bin/new
-.zzz/bin/sb
-{{- end }}
-
 {{- if (eq .chezmoi.hostname "z-laptop-work") }}
 .config/autostart/autostart-librewolf.desktop
 .config/autostart/mullvad-vpn.desktop
