@@ -223,6 +223,9 @@ if ! grep -q '\[git\]' "$chezmoi_config"; then
   printf "%s\n" "$chezmoi_git_settings" >> "$chezmoi_config"
 fi
 
+# Change chezmoi remote URL from HTTPS to SSH
+chezmoi git remote set-url origin git@github.com:mndscp/dotfiles.git
+
 # Symlink config and start keyd
 sudo ln -s /home/z/.config/keyd/default.conf /etc/keyd/default.conf
 systemctl enable --now keyd
