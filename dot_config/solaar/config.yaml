@@ -35,7 +35,7 @@
     gesture2-divert, gesture2-params, sidetone, equalizer, adc_power_management]
   _battery: 4100
   _modelId: B03100000000
-  _sensitive: {divert-keys: false, reprogrammable-keys: false}
+  _sensitive: {divert-keys: true, reprogrammable-keys: false}
   _serial: C8A260FD
   _unitId: C8A260FD
   _wpid: B031
