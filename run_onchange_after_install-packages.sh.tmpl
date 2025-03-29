@@ -59,8 +59,10 @@ btop
 ctpv
 dash
 dashbinsh
-deadbeef-git
+deadbeef
 deadbeef-mpris2-plugin
+deemix-git
+discord
 emote
 en_se
 espanso-x11-bin
@@ -69,8 +71,9 @@ fastfetch
 fd
 ffmpegthumbnailer
 ffmpegthumbs
-figlet
+flacon
 flameshot
+fsearch-git
 fzf
 fzf-tab-git
 gnome-disk-utility
@@ -80,26 +83,36 @@ kdeconnect
 keyd
 lf-git
 lib32-ncurses
+librewolf
 magic-wormhole
 mpv
 mpv-thumbfast-git
 mpv-uosc
+mullvad-vpn
 neovim
-nomacs-git
+nomacs
+obsidian
+ocenaudio-bin
 okular
 paccache-hook
 peek
 procs
-reflector-pacman-hook-git
+puddletag
 ripgrep
+rsgain-git
 shellcheck-bin
+signal-desktop
 solaar
+soundconverter
+sox
 speedcrunch
 sshfs
 syncthing
 tdrop
 tealdeer
+thunderbird
 tmux
+transmission-remote-gtk
 trash-cli-git
 ttf-bitstream-vera
 ttf-dejavu
@@ -112,8 +125,13 @@ ufw
 unrar
 unzip
 ventoy-bin
+vscodium
+vscodium-features
+vscodium-marketplace
 wmctrl
 xclip
+yt-dlp
+zapzap
 zoxide
 zsh
 zsh-abbr
@@ -121,71 +139,6 @@ zsh-autosuggestions
 zsh-history-substring-search
 zsh-syntax-highlighting
 zsh-theme-powerlevel10k-git
-
-{{ if eq .chezmoi.hostname "z-desktop-play" }}
-deemix-git
-discord
-flacon
-fsearch-git
-librewolf
-mullvad-vpn
-obsidian-bin
-ocenaudio-bin
-puddletag
-rsgain-git
-signal-desktop
-soundconverter
-sox
-thunderbird
-transmission-remote-gtk
-vscodium
-vscodium-features
-vscodium-marketplace
-yt-dlp
-zapzap
-{{ end }}
-
-{{ if eq .chezmoi.hostname "z-laptop-play" }}
-
-deemix-git
-discord
-flacon
-fsearch-git
-librewolf
-mullvad-vpn
-obsidian
-ocenaudio-bin
-puddletag
-rsgain-git
-signal-desktop
-soundconverter
-sox
-thunderbird
-transmission-remote-gtk
-vscodium
-vscodium-features
-vscodium-marketplace
-yt-dlp
-zapzap
-{{ end }}
-
-{{ if eq .chezmoi.hostname "z-desktop-work" }}
-composer
-jitsi-meet-desktop
-nvm
-slack-desktop
-ungoogled-chromium-bin
-visual-studio-code-bin
-{{ end }}
-
-{{ if eq .chezmoi.hostname "z-laptop-work" }}
-composer
-jitsi-meet-desktop
-nvm
-slack-desktop
-ungoogled-chromium-bin
-visual-studio-code-bin
-{{ end }}
 "
 
 # Iterate over each package in the list and install if not already installed
@@ -228,4 +181,3 @@ chezmoi git remote set-url origin git@github.com:mndscp/dotfiles.git
 
 # Symlink config and start keyd
 sudo ln -s /home/z/.config/keyd/default.conf /etc/keyd/default.conf
-systemctl enable --now keyd
