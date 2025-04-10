@@ -114,10 +114,17 @@ bindkey -M menuselect 'l' forward-char
 bindkey -M menuselect 'k' down-line-or-history
 
 # Up and down arrow keys in history search
-bindkey "$terminfo[kcuu1]" history-substring-search-up
-bindkey "^[[A" history-substring-search-up
-bindkey "$terminfo[kcud1]" history-substring-search-down
-bindkey "^[[B" history-substring-search-down
+# bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "^[[A" history-substring-search-up # Up Arrow
+# bindkey "$terminfo[kcud1]" history-substring-search-down
+bindkey "^[[B" history-substring-search-down # Down Arrow
+
+# Emulate functionality
+bindkey "^[[1;5D" backward-word  # Ctrl + Left Arrow
+bindkey "^[[1;5C" forward-word   # Ctrl + Right Arrow
+bindkey '^H' backward-kill-word  # Ctrl + Backspace
+bindkey '^[[3;5~' kill-word      # Ctrl + Delete
+bindkey '^[[3~' delete-char      # Delete
 
 # Archive extraction
 # usage: ex <file>
