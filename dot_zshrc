@@ -164,8 +164,8 @@ lfcd() {
 }
 
 # fzf-tab
-# disable sort when completing `git checkout`
-zstyle ':completion:*:git-checkout:*' sort false
+# disable sort when completing `git switch`
+zstyle ':completion:*:git-switch:*' sort false
 # set descriptions format to enable group support
 # zstyle ':completion:*:descriptions' format '[%d]'
 # set list-colors to enable filename colorizing
