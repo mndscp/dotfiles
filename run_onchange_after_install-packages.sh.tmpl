@@ -54,6 +54,7 @@ chaotic_aur_list=$(yay -Sl chaotic-aur)
 # List of packages to check and install if necessary
 PACKAGE_LIST="
 alacritty
+ark
 bat
 btop
 ctpv
@@ -66,6 +67,7 @@ discord
 emote
 en_se
 espanso-x11-bin
+exfat-utils
 eza
 fastfetch
 fd
@@ -80,7 +82,11 @@ gnome-disk-utility
 ibus-hangul
 jq
 kdeconnect
+kernel-install-mkinitcpio
 keyd
+kwalletmanager
+kwin-effects-forceblur
+less
 lf-git
 lib32-ncurses
 librewolf
@@ -91,6 +97,8 @@ mpv-uosc
 mullvad-vpn
 neovim
 nomacs
+noto-fonts-cjk
+noto-fonts-extra
 obsidian
 ocenaudio-bin
 okular
@@ -122,6 +130,7 @@ ttf-ms-win11-auto
 ttf-opensans
 ueberzugpp
 ufw
+ufw-extras
 unrar
 unzip
 ventoy-bin
@@ -179,5 +188,5 @@ fi
 # Change chezmoi remote URL from HTTPS to SSH
 chezmoi git remote set-url origin git@github.com:mndscp/dotfiles.git
 
-# Symlink config and start keyd
+# Symlink keyd config
 sudo ln -s /home/z/.config/keyd/default.conf /etc/keyd/default.conf
