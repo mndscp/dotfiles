@@ -1,6 +1,7 @@
 [Layout]
-DisplayNames=en
+DisplayNames=
 LayoutList=us
 ResetOldOptions=true
 Use=true
 VariantList=de_se_fi
+
