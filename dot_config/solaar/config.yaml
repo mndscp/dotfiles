@@ -40,7 +40,7 @@
   _unitId: C8A260FD
   _wpid: B031
   change-host: null
-  divert-keys: {82: 0, 83: 1, 86: 1, 253: 1}
+  divert-keys: {82: 0, 83: 0, 86: 0, 253: 1}
   dpi: 1000
   lowres-scroll-mode: false
   reprogrammable-keys: {82: 82, 83: 83, 86: 86, 253: 253}
