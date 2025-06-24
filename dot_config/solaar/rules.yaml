@@ -1,5 +1,5 @@
 %YAML 1.3
 ---
 - Key: [DPI Switch, pressed]
-- Execute: [deadbeef, --play-pause]
+- Execute: [audacious, --play-pause]
 ...

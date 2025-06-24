@@ -23,6 +23,7 @@ export SUDO_PROMPT="$(tput setaf 3)Password$(tput sgr0) "
 
 bindkey -e
 bindkey -s "^f" "lf\n"
+bindkey -s "^b" "btop\n"
 
 # Source file if it exists
 source_file() {
