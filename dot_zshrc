@@ -20,6 +20,7 @@ export OPENER="code"
 export PAGER="bat"
 export PATH=$PATH:~/.zzz/bin
 export SUDO_PROMPT="$(tput setaf 3)Password$(tput sgr0) "
+export ZSH_AUTOSUGGEST_STRATEGY=
 
 bindkey -e
 bindkey -s "^f" "lf\n"
@@ -37,7 +38,7 @@ source_file ~/.zzz/aliases && source_file /usr/share/zsh/plugins/zsh-abbr/zsh-ab
 source_file /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.zsh
 source_file /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source_file /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source_file /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+# source_file /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 eval "$(zoxide init zsh)"
 
@@ -117,9 +118,9 @@ bindkey -M menuselect 'k' down-line-or-history
 
 # Up and down arrow keys in history search
 # bindkey "$terminfo[kcuu1]" history-substring-search-up
-bindkey "^[[A" history-substring-search-up # Up Arrow
+# bindkey "^[[A" history-substring-search-up # Up Arrow
 # bindkey "$terminfo[kcud1]" history-substring-search-down
-bindkey "^[[B" history-substring-search-down # Down Arrow
+# bindkey "^[[B" history-substring-search-down # Down Arrow
 
 # Emulate functionality
 bindkey "^[[1;5D" backward-word  # Ctrl + Left Arrow
@@ -200,3 +201,5 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
 zstyle ':fzf-tab:*' switch-group ',' '.'
 
 source /home/z/.config/broot/launcher/bash/br
+
+eval "$(atuin init zsh --disable-ctrl-r)"
